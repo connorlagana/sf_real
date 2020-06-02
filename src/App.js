@@ -3,6 +3,7 @@ import "./App.scss";
 
 import TypeList from "./components/TypeList";
 import CreateMixButton from "./components/CreateMixButton";
+import FrontPage from "./components/FrontPage/FrontPage.js";
 
 class App extends Component {
   constructor(props) {
@@ -221,9 +222,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div id="title">Sound Flex</div>
-        <TypeList types={this.state.types} />
-        <CreateMixButton createMix={this.createMix} />
+        <FrontPage />
+        {/* <div id="title">Sound Flex</div> */}
+        {/* <TypeList types={this.state.types} />
+        <CreateMixButton createMix={this.createMix} /> */}
       </div>
     );
   }
