@@ -1,0 +1,76 @@
+.App {
+  // background-color: black;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  #title {
+    font-size: 7vh;
+    font-weight: 700;
+    color: black;
+  }
+}
+
+.types {
+  width: 100vw;
+  & .type {
+    background-color: gray;
+    margin: 2vh;
+    padding: 1vh;
+
+    & #chooseFrom {
+      font-size: 3vh;
+      text-decoration: underline;
+      color: white;
+      font-weight: 700;
+    }
+  }
+}
+
+.artistList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  & .artist {
+    height: 30vh;
+    width: 16vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & #artistTitle {
+      font-size: 3vh;
+      color: white;
+    }
+
+    & img {
+      height: 22vh;
+      width: 12vw;
+      object-fit: cover;
+    }
+
+    & button {
+      height: 4vh;
+      width: 6vw;
+      margin-top: 1vh;
+      box-shadow: none;
+      border: none;
+      border-radius: 1vh;
+      background-color: white;
+      color: black;
+      font-size: 1.2vh;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    & button:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+}
