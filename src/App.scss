@@ -5,76 +5,107 @@
   background-color: black;
   height: 100vh;
   width: 100vw;
-  & .navBar {
-    // background-color: red;
-    width: 100vw;
+}
+
+.NavBar {
+  // background-color: red;
+  width: 100vw;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: black;
+
+  & .leftNav {
+    width: 50vw;
     height: 8vh;
+    // background-color: purple;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 
-    & .leftNav {
-      width: 50vw;
-      height: 8vh;
-      // background-color: purple;
+    & .logoDiv {
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
+      // background-color: orange;
+      & #circleLogo {
+        height: 5vh;
+        cursor: pointer;
+      }
 
-      & .logoDiv {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        // background-color: orange;
-        & #circleLogo {
-          height: 5vh;
-          cursor: pointer;
+      & #wordLogo {
+        height: 2vh;
+        cursor: pointer;
+      }
+    }
+  }
+  & .rightNav {
+    width: 50vw;
+    height: 8vh;
+    & ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      position: absolute;
+
+      right: 0;
+      top: 0;
+
+      & li {
+        margin: 2vh;
+        font-size: 1.7vh;
+        color: white;
+        cursor: pointer;
+        list-style-type: none;
+
+        & .link {
+          position: relative;
+          display: block;
+          padding: 10px 15px;
+          text-align: center;
+          font-size: 16px;
+          color: #ffffff;
+          text-transform: uppercase;
+          text-decoration: none;
+          transition: 0.3s;
         }
 
-        & #wordLogo {
-          height: 2vh;
-          cursor: pointer;
+        & .link:hover {
+          color: rgb(243, 176, 106);
         }
       }
     }
-    & .rightNav {
-      width: 50vw;
-      height: 8vh;
-      & ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        position: absolute;
+  }
+}
 
-        right: 0;
-        top: 0;
+.MainFront {
+  color: white;
+  background-color: rgb(39, 66, 172);
 
-        & li {
-          margin: 2vh;
-          font-size: 1.7vh;
-          color: white;
-          cursor: pointer;
-          list-style-type: none;
+  height: 100;
+  width: 100vw;
 
-          & .link {
-            position: relative;
-            display: block;
-            padding: 10px 15px;
-            text-align: center;
-            font-size: 16px;
-            color: #ffffff;
-            text-transform: uppercase;
-            text-decoration: none;
-            transition: 0.3s;
-          }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 
-          & .link:hover {
-            color: rgb(243, 176, 106);
-          }
-        }
-      }
-    }
+  & .leftFront {
+    height: 100vh;
+    width: 60vw;
+    
+  }
+
+  & .rightFront {
+    height: 100vh;
+    width: 40vw;
+    background-color: black;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    // border-radius: 100%;
   }
 }
 
