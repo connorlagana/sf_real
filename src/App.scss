@@ -40,32 +40,38 @@
     & .rightNav {
       width: 50vw;
       height: 8vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: row;
+      & ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        position: absolute;
 
-      & li {
-        margin: 2vh;
-        font-size: 1.7vh;
-        color: white;
-        cursor: pointer;
-        list-style-type: none;
+        right: 0;
+        top: 0;
 
-        & .link {
-          position: relative;
-          display: block;
-          padding: 10px 15px;
-          text-align: center;
-          font-size: 16px;
-          color: #ffffff;
-          text-transform: uppercase;
-          text-decoration: none;
-          transition: 0.5s;
-        }
+        & li {
+          margin: 2vh;
+          font-size: 1.7vh;
+          color: white;
+          cursor: pointer;
+          list-style-type: none;
 
-        & .link:hover {
-          color: #ffad5c;
+          & .link {
+            position: relative;
+            display: block;
+            padding: 10px 15px;
+            text-align: center;
+            font-size: 16px;
+            color: #ffffff;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: 0.3s;
+          }
+
+          & .link:hover {
+            color: rgb(243, 176, 106);
+          }
         }
       }
     }

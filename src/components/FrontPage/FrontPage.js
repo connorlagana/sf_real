@@ -19,28 +19,30 @@ class FrontPage extends Component {
             </div>
             <br></br>
           </div>
-          <ul className="rightNav">
-            <li>
-              <Link to="/premium" className="link">
-                Premium
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" className="link">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="/signup" className="link">
-                Sign Up
-              </Link>
-            </li>
-            <li>
-              <Link to="/login" className="link">
-                Log In
-              </Link>
-            </li>
-          </ul>
+          <div className="rightNav">
+            <ul>
+              <li>
+                <Link to="/premium" className="link">
+                  Premium
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="link">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/signup" className="link">
+                  Sign Up
+                </Link>
+              </li>
+              <li>
+                <Link to="/login" className="link">
+                  Log In
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     );
