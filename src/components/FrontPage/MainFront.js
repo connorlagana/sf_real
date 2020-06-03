@@ -5,7 +5,7 @@ const MainFront = () => {
     <div className="MainFront">
       <div className="leftFront">
         <div className="centeredStack">
-          <div>Listening is everything</div>
+          <div id="bigLabel">Listening is everything</div>
           <div>Millions of songs and podcasts. No credit card needed</div>
           <button>Get Spotify Free</button>
         </div>
