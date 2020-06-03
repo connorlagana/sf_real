@@ -21,22 +21,22 @@ class FrontPage extends Component {
           </div>
           <ul className="rightNav">
             <li>
-              <Link to="/service" className="link">
+              <Link to="/premium" className="link">
                 Premium
               </Link>
             </li>
             <li>
-              <Link to="/service" className="link">
+              <Link to="/about" className="link">
                 About
               </Link>
             </li>
             <li>
-              <Link to="/service" className="link">
+              <Link to="/signup" className="link">
                 Sign Up
               </Link>
             </li>
             <li>
-              <Link to="/service" className="link">
+              <Link to="/login" className="link">
                 Log In
               </Link>
             </li>
