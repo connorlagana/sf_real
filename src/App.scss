@@ -70,6 +70,7 @@
           text-transform: uppercase;
           text-decoration: none;
           transition: 0.3s;
+          font-family: "Tajawal", sans-serif;
         }
 
         & .link:hover {
@@ -82,7 +83,7 @@
 
 .MainFront {
   color: white;
-  background-color: rgb(39, 66, 172);
+  background-color: rgb(20, 42, 131);
 
   height: 100;
   width: 100vw;
@@ -105,12 +106,33 @@
       align-items: flex-start;
       color: rgb(243, 176, 106);
       flex-direction: column;
-      background-color: rosybrown;
+
       width: 30vw;
+      font-family: "Tajawal", sans-serif;
 
       & #bigLabel {
         font-size: 5vw;
         font-weight: 700;
+      }
+
+      & #smallLabel {
+        font-size: 1.1vw;
+        font-weight: 300;
+      }
+
+      & button {
+        height: 4vh;
+        width: 10vw;
+        background-color: rgb(243, 176, 106);
+        border: none;
+        box-shadow: none;
+        cursor: pointer;
+        margin-top: 3vh;
+        border-radius: 5vh;
+        font-size: 1.2vh;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: rgb(20, 42, 131);
       }
     }
   }
@@ -118,10 +140,27 @@
   & .rightFront {
     height: 100vh;
     width: 40vw;
-    background-color: black;
+    background-color: rgb(133, 133, 133);
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
     // border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    overflow: hidden;
+
+    & .art {
+      // background-color: green;
+      & img {
+        height: 12vh;
+        width: 12vh;
+        margin: 1vh;
+        z-index: 0;
+      }
+    }
   }
 }
 

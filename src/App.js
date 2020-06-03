@@ -4,6 +4,7 @@ import "./App.scss";
 import TypeList from "./components/TypeList";
 import CreateMixButton from "./components/CreateMixButton";
 import FrontPage from "./components/FrontPage/FrontPage.js";
+import { Route } from "react-router-dom";
 
 class App extends Component {
   constructor(props) {
@@ -222,7 +223,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <FrontPage />
+        <Route path="/">
+          <FrontPage />
+        </Route>
+
         {/* <div id="title">Sound Flex</div> */}
         {/* <TypeList types={this.state.types} />
         <CreateMixButton createMix={this.createMix} /> */}
