@@ -237,8 +237,8 @@ class App extends Component {
           </>
         ) : (
           <>
-              <Redirect to="/home" />
-              <Route exact path="/home">
+            <Redirect to="/home" />
+            <Route exact path="/home">
               <FrontPage />
             </Route>
           </>

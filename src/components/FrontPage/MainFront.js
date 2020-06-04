@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 let obj = [
   "https://i.scdn.co/image/ab67616d0000b2732b517912fd69652ff10d8e11",
@@ -51,7 +52,7 @@ const MainFront = () => {
     <div className="MainFront">
       <div className="leftFront">
         <div className="centeredStack">
-          <div id="bigLabel">Music is everything</div>
+          <div id="bigLabel">Music made for everyone</div>
           <div id="smallLabel">
             All your favorite songs in a 1 hour mix. No credit card needed.
           </div>
@@ -62,6 +63,10 @@ const MainFront = () => {
       </div>
       <div className="rightFront">
         {obj.map((art) => (
+          // <div className="art">
+          //   <img src={art} />
+          // </div>
+
           <div className="art">
             <img src={art} />
           </div>
