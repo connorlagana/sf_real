@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 let obj = [
   "https://i.scdn.co/image/ab67616d0000b2732b517912fd69652ff10d8e11",
@@ -52,9 +53,11 @@ const MainFront = () => {
         <div className="centeredStack">
           <div id="bigLabel">Music is everything</div>
           <div id="smallLabel">
-            All your favorite songs in a 1 hour mix. No credit card needed
+            All your favorite songs in a 1 hour mix. No credit card needed.
           </div>
-          <button>Get Soundflex Free</button>
+          <Link to="/register">
+            <button>Get Soundflex Free</button>
+          </Link>
         </div>
       </div>
       <div className="rightFront">

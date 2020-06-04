@@ -5,6 +5,7 @@ import TypeList from "./components/TypeList";
 import CreateMixButton from "./components/CreateMixButton";
 import FrontPage from "./components/FrontPage/FrontPage.js";
 import { Route } from "react-router-dom";
+import Register from "./components/Register/Register";
 
 class App extends Component {
   constructor(props) {
@@ -223,8 +224,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Route path="/">
+        <Route exact path="/">
           <FrontPage />
+        </Route>
+        <Route path="/register">
+          <Register />
         </Route>
 
         {/* <div id="title">Sound Flex</div> */}

@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import NavBar from "./NavBar.js";
-import MainFront from "./MainFront.js";
 
 const Register = () => {
   return (
