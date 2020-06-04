@@ -134,6 +134,11 @@
         font-weight: 500;
         text-transform: uppercase;
         color: rgb(20, 42, 131);
+        transition: 0.5s;
+      }
+
+      & button:hover {
+        background-color: white;
       }
     }
   }
