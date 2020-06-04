@@ -10,11 +10,7 @@ class Register extends Component {
   render() {
     return (
       <div className="Register">
-        <div className="logos">
-          <img id="circleLogo" src={circleLogo} />
-          <img id="wordLogo" src={logo1} />
-        </div>
-        <form></form>
+        <div> Hello World</div>
       </div>
     );
   }

@@ -37,6 +37,7 @@
       & #wordLogo {
         height: 2vh;
         cursor: pointer;
+        margin-bottom: 0.5vh;
       }
     }
   }
@@ -160,6 +161,32 @@
         margin: 1vh;
         z-index: 0;
       }
+    }
+  }
+}
+
+.Register {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  & .logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 6vh;
+
+    & #circleLogo {
+      height: 7vh;
+    }
+
+    & #wordLogo {
+      height: 4vh;
+      margin-bottom: 1vh;
     }
   }
 }

@@ -4,7 +4,7 @@ import "./App.scss";
 import TypeList from "./components/TypeList";
 import CreateMixButton from "./components/CreateMixButton";
 import FrontPage from "./components/FrontPage/FrontPage.js";
-import { Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import Register from "./components/Register/Register";
 
 class App extends Component {
@@ -12,6 +12,7 @@ class App extends Component {
     super(props);
 
     this.state = {
+      currentUser: false,
       mix: {
         instrumental: ["instrumental1", "instrumental2", "instrumental3"],
         firstV: ["firstV1", "firstV2", "firstV3"],
@@ -224,12 +225,24 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Route exact path="/">
-          <FrontPage />
-        </Route>
-        <Route path="/register">
-          <Register />
-        </Route>
+        {!this.state.currentUser.username ? (
+          <>
+            <Redirect to="/" />
+            <Route exact path="/">
+              <FrontPage />
+            </Route>
+            <Route path="/register">
+              <Register />
+            </Route>
+          </>
+        ) : (
+          <>
+              <Redirect to="/home" />
+              <Route exact path="/home">
+              <FrontPage />
+            </Route>
+          </>
+        )}
 
         {/* <div id="title">Sound Flex</div> */}
         {/* <TypeList types={this.state.types} />
