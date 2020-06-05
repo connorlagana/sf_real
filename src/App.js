@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import "./App.scss";
 
+import { loginUser, registerUser, verifyUser } from "./services/api_helper";
+
 import TypeList from "./components/TypeList";
 import CreateMixButton from "./components/CreateMixButton";
 import FrontPage from "./components/FrontPage/FrontPage.js";
+import Home from "./components/Home/Home.js";
 import { Route, Redirect } from "react-router-dom";
 import Register from "./components/Register/Register";
 
@@ -222,6 +225,21 @@ class App extends Component {
     // audio.play();
   };
 
+  handleRegister = async (e, registerData) => {
+    // e.preventDefault();
+    if (!registerData.username || !registerData.password) {
+      this.setState({
+        errorText: "You must supply a username AND password",
+      });
+    } else {
+      const currentUser = await registerUser(registerData);
+      console.log("from app.js");
+      this.setState({
+        currentUser,
+      });
+    }
+  };
+
   render() {
     return (
       <div className="App">
@@ -232,14 +250,14 @@ class App extends Component {
               <FrontPage />
             </Route>
             <Route path="/register">
-              <Register />
+              <Register handleRegister={this.handleRegister} />
             </Route>
           </>
         ) : (
           <>
             <Redirect to="/home" />
             <Route exact path="/home">
-              <FrontPage />
+              <Home />
             </Route>
           </>
         )}

@@ -20,6 +20,19 @@ class Register extends Component {
     });
   };
 
+  registerUser = (e) => {
+    if (this.state.email === this.state.emailConfirm) {
+      console.log("they match");
+      this.props.handleRegister(e, {
+        username: this.state.username,
+        email: this.state.email,
+        password: this.state.password,
+      });
+    } else {
+      console.log("they don't match");
+    }
+  };
+
   render() {
     return (
       <div className="Register">
@@ -29,7 +42,6 @@ class Register extends Component {
         </div>
         <form>
           <input
-            id="myName"
             type="text"
             name="email"
             value={this.state.email}
@@ -39,9 +51,8 @@ class Register extends Component {
             required
           />
           <input
-            id="myName"
             type="text"
-            name="username"
+            name="emailConfirm"
             value={this.state.emailConfirm}
             onChange={this.handleChange}
             placeholder="Confirm your email"
@@ -49,7 +60,6 @@ class Register extends Component {
             required
           />
           <input
-            id="myName"
             type="text"
             name="username"
             value={this.state.username}
@@ -59,7 +69,6 @@ class Register extends Component {
             required
           />
           <input
-            id="myName"
             type="password"
             name="password"
             value={this.state.password}
