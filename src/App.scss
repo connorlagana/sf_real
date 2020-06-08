@@ -307,7 +307,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
   background-color: black;
 
   & .leftHH {
@@ -367,6 +366,26 @@
         }
       }
     }
+  }
+}
+
+.HomeFront {
+  width: 100vw;
+  background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  & .song {
+    height: 14vh;
+    width: 90vw;
+    background-color: brown;
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
   }
 }
 

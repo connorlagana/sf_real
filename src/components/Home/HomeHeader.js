@@ -16,23 +16,23 @@ const HomeHeader = () => {
       <div className="rightHH">
         <ul>
           <li>
-            <Link to="/premium" className="link">
-              Premium
+            <Link to="/home" className="link">
+              Home
             </Link>
           </li>
           <li>
-            <Link to="/about" className="link">
-              About
+            <Link to="/friends" className="link">
+              Friends
             </Link>
           </li>
           <li>
-            <Link to="/register" className="link">
-              Sign Up
+            <Link to="/search" className="link">
+              Search
             </Link>
           </li>
           <li>
             <Link to="/login" className="link">
-              Log In
+              Profile
             </Link>
           </li>
         </ul>
