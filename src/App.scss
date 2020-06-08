@@ -377,6 +377,15 @@
   align-items: center;
   flex-direction: column;
   font-family: "Heebo", sans-serif;
+
+  & #numMix {
+    font-size: 3vh;
+    color: white;
+    font-weight: 500;
+    margin-top: 2vh;
+    width: 96vw;
+  }
+
   & .song {
     height: 14vh;
     width: 96vw;
@@ -410,6 +419,18 @@
       }
       & .grad3 {
         background: linear-gradient(to bottom right, #c31432, #240b36);
+      }
+      & .grad4 {
+        background: linear-gradient(to bottom right, #dd3e54, #6be585);
+      }
+      & .grad5 {
+        background: linear-gradient(to bottom right, #8360c3, #2ebf91);
+      }
+      & .grad6 {
+        background: linear-gradient(to bottom right, #654ea3, #eaafc8);
+      }
+      & .grad7 {
+        background: linear-gradient(to bottom right, #659999, #f4791f);
       }
 
       & #songName {
