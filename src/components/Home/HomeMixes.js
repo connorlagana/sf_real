@@ -12,11 +12,12 @@ const HomeMixes = (props) => {
             <div id="square" className={song.color} />
             <div id="songName">{song.name}</div>
           </div>
-          <div>
-            <img src={share} />
+          <div className="rightSong">
+            <img src={share} id="share" />
             <div>
               {song.min}:{song.sec}
             </div>
+            <img src={play} id="play" />
           </div>
         </div>
       ))}

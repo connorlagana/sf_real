@@ -380,12 +380,13 @@
   & .song {
     height: 14vh;
     width: 96vw;
-    background-color: brown;
+
     margin-top: 2vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    background-color: rgb(197, 197, 197);
 
     & .leftSong {
       height: 14vh;
@@ -394,7 +395,7 @@
       justify-content: flex-start;
       align-items: center;
       flex-direction: row;
-      background-color: rgb(88, 88, 88);
+
       & #square {
         height: 12vh;
         width: 12vh;
@@ -413,9 +414,31 @@
 
       & #songName {
         margin-left: 2vh;
-        color: white;
+        color: black;
         font-weight: 500;
         font-size: 2.4vh;
+      }
+    }
+
+    & .rightSong {
+      width: 30vw;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+
+      & #share {
+        height: 3vh;
+      }
+
+      & div {
+        font-size: 2vh;
+        font-weight: 500;
+        color: black;
+      }
+
+      & #play {
+        height: 3vh;
       }
     }
   }
