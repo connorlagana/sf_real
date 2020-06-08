@@ -7,7 +7,7 @@ import TypeList from "./components/TypeList";
 import CreateMixButton from "./components/CreateMixButton";
 import FrontPage from "./components/FrontPage/FrontPage.js";
 import Home from "./components/Home/Home.js";
-import { Route, Redirect } from "react-router-dom";
+import { Route, Redirect, Switch } from "react-router-dom";
 import Register from "./components/Register/Register";
 
 class App extends Component {
@@ -226,7 +226,7 @@ class App extends Component {
   };
 
   handleRegister = async (e, registerData) => {
-    // e.preventDefault();
+    e.preventDefault();
     if (!registerData.username || !registerData.password) {
       this.setState({
         errorText: "You must supply a username AND password",
@@ -235,7 +235,7 @@ class App extends Component {
       const currentUser = await registerUser(registerData);
       console.log("from app.js");
       this.setState({
-        currentUser,
+        currentUser: currentUser,
       });
     }
   };
@@ -259,14 +259,16 @@ class App extends Component {
     return (
       <>
         <Redirect to="/home" />
-        <Route
-          exact
-          path="/home"
-          render={() => <Home currentUser={this.state.currentUser} />}
-        />
-        <div id="title">Sound Flex</div>
-        <TypeList types={this.state.types} />
-        <CreateMixButton createMix={this.createMix} />
+        <Switch>
+          <Route
+            exact
+            path="/home"
+            render={() => <Home currentUser={this.state.currentUser} />}
+          />
+          <div id="title">Sound Flex</div>
+          <TypeList types={this.state.types} />
+          <CreateMixButton createMix={this.createMix} />
+        </Switch>
       </>
     );
     // return (
