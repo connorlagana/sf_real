@@ -371,21 +371,53 @@
 
 .HomeFront {
   width: 100vw;
-  background-color: blueviolet;
+  background-color: rgb(54, 54, 54);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: "Heebo", sans-serif;
   & .song {
     height: 14vh;
-    width: 90vw;
+    width: 96vw;
     background-color: brown;
     margin-top: 2vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    
+
+    & .leftSong {
+      height: 14vh;
+      width: 66vw;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: row;
+      background-color: rgb(88, 88, 88);
+      & #square {
+        height: 12vh;
+        width: 12vh;
+        margin-left: 1vh;
+      }
+
+      & .grad1 {
+        background: linear-gradient(to bottom right, #00c9ff, #92fe9d);
+      }
+      & .grad2 {
+        background: linear-gradient(to bottom right, #373b44, #4286f4);
+      }
+      & .grad3 {
+        background: linear-gradient(to bottom right, #c31432, #240b36);
+      }
+
+      & #songName {
+        margin-left: 2vh;
+        color: white;
+        font-weight: 500;
+        font-size: 2.4vh;
+      }
+    }
   }
 }
 

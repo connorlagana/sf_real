@@ -5,7 +5,10 @@ const HomeFront = (props) => {
     <div className="HomeFront">
       {props.songs.map((song) => (
         <div className="song">
-          <div id="artistTitle">{song.name}</div>
+          <div className="leftSong">
+            <div id="square" className={song.color} />
+            <div id="songName">{song.name}</div>
+          </div>
           <div>{song.color}</div>
         </div>
       ))}

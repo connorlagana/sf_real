@@ -16,11 +16,11 @@ class Home extends Component {
           isPlaying: false,
         },
         {
-          name: "I sucffmrkmfkr",
+          name: "I am con mix",
           color: "grad2",
           min: 29,
           sec: 56,
-          isPlaying: false,
+          isPlaying: true,
         },
         {
           name: "Funeral Mix",
