@@ -15,7 +15,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      currentUser: false,
+      currentUser: true,
       mix: {
         instrumental: ["instrumental1", "instrumental2", "instrumental3"],
         firstV: ["firstV1", "firstV2", "firstV3"],

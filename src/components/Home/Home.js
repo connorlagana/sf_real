@@ -1,17 +1,18 @@
 import React, { Component } from "react";
-import circleLogo from "../../logos/circleLogo.png";
-import logo1 from "../../logos/logo1.png";
+import HomeHeader from "./HomeHeader.js";
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
       currentUser: null,
+      songs: [],
     };
   }
   render() {
     return (
       <div className="Home">
+        <HomeHeader />
         <div> Hello World, This is the home page</div>
       </div>
     );
