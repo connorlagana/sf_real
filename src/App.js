@@ -241,32 +241,61 @@ class App extends Component {
   };
 
   render() {
-    return (
-      <div className="App">
-        {!this.state.currentUser.username ? (
-          <>
-            <Redirect to="/" />
-            <Route exact path="/">
-              <FrontPage />
-            </Route>
-            <Route path="/register">
-              <Register handleRegister={this.handleRegister} />
-            </Route>
-          </>
-        ) : (
-          <>
-            <Redirect to="/home" />
-            <Route exact path="/home">
-              <Home />
-            </Route>
-          </>
-        )}
+    if (this.state.currentUser === false) {
+      return (
+        <>
+          <Redirect to="/" />
 
-        {/* <div id="title">Sound Flex</div> */}
-        {/* <TypeList types={this.state.types} />
-        <CreateMixButton createMix={this.createMix} /> */}
-      </div>
+          <Route exact path="/">
+            <FrontPage />
+          </Route>
+
+          <Route path="/register">
+            <Register handleRegister={this.handleRegister} />
+          </Route>
+        </>
+      );
+    }
+    return (
+      <>
+        <Redirect to="/home" />
+        <Route
+          exact
+          path="/home"
+          render={() => <Home currentUser={this.state.currentUser} />}
+        />
+        <div id="title">Sound Flex</div>
+        <TypeList types={this.state.types} />
+        <CreateMixButton createMix={this.createMix} />
+      </>
     );
+    // return (
+    //   <div className="App">
+    //     {!this.state.currentUser.username ? (
+    //       <>
+    //         <Redirect to="/" />
+    //         <Route exact path="/">
+    //           <FrontPage />
+    //         </Route>
+    //         <Route path="/register">
+    //           <Register handleRegister={this.handleRegister} />
+    //         </Route>
+    //       </>
+    //     ) : (
+    //       <>
+    //         <Redirect to="/home" />
+    //         <Route
+    //           exact
+    //           path="/home"
+    //           render={() => <Home currentUser={this.state.currentUser} />}
+    //         />
+    //         <div id="title">Sound Flex</div>
+    //         <TypeList types={this.state.types} />
+    //         <CreateMixButton createMix={this.createMix} />
+    //       </>
+    //     )}
+    //   </div>
+    // );
   }
 }
 

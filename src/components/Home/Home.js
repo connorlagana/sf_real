@@ -5,7 +5,9 @@ import logo1 from "../../logos/logo1.png";
 class Home extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      currentUser: null,
+    };
   }
   render() {
     return (

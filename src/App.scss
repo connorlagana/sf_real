@@ -84,7 +84,7 @@
 
 .MainFront {
   color: white;
-  background-color: rgb(20, 42, 131);
+  background-color: rgb(8, 22, 80);
 
   height: 100;
   width: 100vw;
@@ -117,7 +117,7 @@
       }
 
       & #smallLabel {
-        font-size: 1.1vw;
+        font-size: 1vw;
         font-weight: 300;
       }
 
@@ -164,6 +164,73 @@
         width: 12vh;
         margin: 1vh;
       }
+    }
+  }
+}
+
+.FrontFooter {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100vw;
+  height: 30vh;
+  font-family: "Heebo", sans-serif;
+
+  & .leftFF {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    // background-color: green;
+    width: 40vw;
+    height: 30vh;
+    & .lffCol {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+
+      height: 20vh;
+      margin: 3vh;
+      width: 8vw;
+
+      & #lfTitle {
+        color: rgb(126, 126, 126);
+        font-size: 1.6vh;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 2vh 0 1vh 0;
+      }
+
+      & #lfBul {
+        color: white;
+        font-size: 1.4vh;
+        cursor: pointer;
+        margin-bottom: 0.5vh;
+      }
+
+      & #lfBul:hover {
+        color: rgb(243, 176, 106);
+      }
+    }
+  }
+
+  & .rightFF {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: green;
+    width: 40vw;
+    height: 30vh;
+
+    & svg {
+      background-color: gray;
+      height: 4vh;
+      // border-radius: 5vh;
+      padding: 1vh;
     }
   }
 }
