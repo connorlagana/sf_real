@@ -6,7 +6,7 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentUser: null,
+      currentUser: this.props.currentUser,
       songs: [
         {
           name: "Con's Mix Vol 1",

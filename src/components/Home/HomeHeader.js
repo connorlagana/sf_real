@@ -32,7 +32,7 @@ const HomeHeader = (props) => {
           </li>
           <li>
             <Link to="/login" className="link">
-              Profile
+              {props.currentUser.username}
             </Link>
           </li>
         </ul>
