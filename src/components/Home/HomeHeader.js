@@ -3,7 +3,7 @@ import circleLogo from "../../logos/circleLogo.png";
 import logo2 from "../../logos/logo2.png";
 import { Link } from "react-router-dom";
 
-const HomeHeader = () => {
+const HomeHeader = (props) => {
   return (
     <div className="HomeHeader">
       <div className="leftHH">

@@ -60,10 +60,15 @@ class Home extends Component {
       ],
     };
   }
+
+  componentDidMount() {
+    console.log("the following is the state of home");
+    console.log(this.state);
+  }
   render() {
     return (
       <div className="Home">
-        <HomeHeader />
+        <HomeHeader currentUser={this.state.currentUser} />
         <HomeFront songs={this.state.songs} />
         <div> Hello World, This is the home page</div>
       </div>

@@ -409,6 +409,12 @@
         height: 12vh;
         width: 12vh;
         margin-left: 1vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & #plus {
+          width: 5vh;
+        }
       }
 
       & .grad1 {
@@ -431,6 +437,10 @@
       }
       & .grad7 {
         background: linear-gradient(to bottom right, #659999, #f4791f);
+      }
+
+      & .add {
+        background: radial-gradient(white, rgb(197, 197, 197));
       }
 
       & #songName {

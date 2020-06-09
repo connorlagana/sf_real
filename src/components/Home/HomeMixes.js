@@ -2,6 +2,9 @@ import React from "react";
 import share from "../../icons/share.png";
 import play from "../../icons/play.png";
 import pause from "../../icons/pause.png";
+import plus from "../../icons/plus.png";
+
+import { Link } from "react-router-dom";
 
 const HomeMixes = (props) => {
   return (
@@ -21,6 +24,17 @@ const HomeMixes = (props) => {
           </div>
         </div>
       ))}
+
+      <div className="song">
+        <Link to="/new">
+          <div className="leftSong">
+            <div id="square" className="add">
+              <img src={plus} id="plus" />
+            </div>
+            <div id="songName">Create New Mix</div>
+          </div>
+        </Link>
+      </div>
     </div>
   );
 };
