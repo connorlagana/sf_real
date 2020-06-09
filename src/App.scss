@@ -475,6 +475,29 @@
   }
 }
 
+.NewMix {
+  background-color: black;
+
+  & .fixedHeader {
+    height: 25vh;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    & .topFH {
+      width: 100vw;
+      height: 7vh;
+      background-color: rgb(107, 77, 37);
+
+      & .MaterialIcon {
+        height: 5vh;
+      }
+    }
+  }
+}
+
 .types {
   width: 100vw;
   & .type {

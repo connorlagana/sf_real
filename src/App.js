@@ -9,13 +9,14 @@ import FrontPage from "./components/FrontPage/FrontPage.js";
 import Home from "./components/Home/Home.js";
 import { Route, Redirect, Switch } from "react-router-dom";
 import Register from "./components/Register/Register";
+import NewMix from "./components/NewMix/NewMix.js";
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      currentUser: false,
+      currentUser: true,
       mix: {
         instrumental: ["instrumental1", "instrumental2", "instrumental3"],
         firstV: ["firstV1", "firstV2", "firstV3"],
@@ -258,12 +259,17 @@ class App extends Component {
     }
     return (
       <>
-        <Redirect to="/home" />
+        <Redirect to="/new" />
         <Switch>
           <Route
             exact
             path="/home"
             render={() => <Home currentUser={this.state.currentUser} />}
+          />
+          <Route
+            exact
+            path="/new"
+            render={() => <NewMix currentUser={this.state.currentUser} />}
           />
           <div id="title">Sound Flex</div>
           <TypeList types={this.state.types} />
