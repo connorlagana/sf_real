@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
+import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
+import { Link } from "react-router-dom";
 
 class NewMix extends Component {
   constructor(props) {
@@ -26,7 +29,14 @@ class NewMix extends Component {
     return (
       <div className="NewMix">
         <div className="fixedHeader">
-          <div className="topFH"></div>
+          <div className="topFH">
+            <Link to="/home">
+              <KeyboardArrowLeft id="left" />
+            </Link>
+            <Link to="/home">
+              <KeyboardArrowRight id="left" />
+            </Link>
+          </div>
         </div>
         <div className="bottomNew"></div>
       </div>

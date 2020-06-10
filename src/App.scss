@@ -487,12 +487,24 @@
     flex-direction: column;
 
     & .topFH {
-      width: 100vw;
+      margin-top: 3vh;
+      width: 98vw;
       height: 7vh;
-      background-color: rgb(107, 77, 37);
-
-      & .MaterialIcon {
+      // background-color: rgb(107, 77, 37);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      & #left {
         height: 5vh;
+        width: 5vh;
+        fill: #f3b06a;
+        border-radius: 10vh;
+        transition: 0.2s;
+      }
+
+      & #left:hover {
+        background-color: #f3b06a;
+        fill: black;
       }
     }
   }
