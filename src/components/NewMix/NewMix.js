@@ -124,8 +124,22 @@ class NewMix extends Component {
     console.log("clicking");
   };
 
-  handleChipDelete = () => {
+  handleChipDelete = async (e, postId) => {
+    e.preventDefault();
+    console.log(postId);
     console.log("deleting");
+
+    var arr = [];
+
+    for (let i = 0; i < this.state.chosenArtists.length; i++) {
+      if (this.state.chosenArtists[i].artistId != postId) {
+        arr.push(this.state.chosenArtists[i]);
+      }
+    }
+
+    this.setState({
+      chosenArtists: arr,
+    });
   };
 
   render() {

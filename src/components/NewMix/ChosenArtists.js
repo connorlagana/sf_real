@@ -11,7 +11,10 @@ const ChosenArtists = (props) => {
             <Chip
               label={artist.name}
               // onClick={props.handleChipClick}
-              onDelete={props.handleChipDelete}
+              onDelete={(e) => {
+                props.handleChipDelete(e, artist.artistId);
+              }}
+              name={artist.artistId}
               clickable
             />
           </div>
