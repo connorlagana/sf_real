@@ -2,7 +2,7 @@ import React from "react";
 import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
 import { Link } from "react-router-dom";
-import { TextField } from "@material-ui/core";
+import TitleNewMix from "./TitleNewMix.js";
 
 const NewMixHeader = () => {
   return (
@@ -16,8 +16,7 @@ const NewMixHeader = () => {
         </Link>
       </div>
       <div className="midFH">
-        <label>Name of Mix: </label>
-        <TextField placeholder="ConsMix 1" />
+        <TitleNewMix />
       </div>
     </div>
   );

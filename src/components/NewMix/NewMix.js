@@ -146,21 +146,11 @@ class NewMix extends Component {
     return (
       <div className="NewMix">
         <NewMixHeader />
-        <TitleNewMix />
         <ChosenArtists
           handleChipClick={this.handleChipClick}
           handleChipDelete={this.handleChipDelete}
           chosenArtists={this.state.chosenArtists}
         />
-
-        <div className="bottomNew">
-          <button>Create</button>
-          {/* <ReactAudioPlayer
-            src={powfu}
-            autoPlay
-            controls
-          /> */}
-        </div>
       </div>
     );
   }
