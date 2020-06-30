@@ -13,18 +13,93 @@ class NewMix extends Component {
     this.state = {
       chosenArtists: ["Kanye West", "Eminem", "VAVO"],
       artists: [
-        "Kanye West",
-        "Blink-182",
-        "Calvin Harris",
-        "Kid Quill",
-        "G-Eazy",
-        "Eminem",
-        "The Script",
-        "Aries",
-        "YBN Nahmir",
-        "VAVO",
-        "Ryan Caraveo",
-        "Galantis",
+        {
+          genre: "rap",
+          artists: [
+            {
+              name: "Kanye West",
+              artistId: 1,
+            },
+            {
+              name: "Big L",
+              artistId: 2,
+            },
+            {
+              name: "Eminem",
+              artistId: 3,
+            },
+            {
+              name: "Jay-Z",
+              artistId: 4,
+            },
+            {
+              name: "ASAP Rocky",
+              artistId: 5,
+            },
+            {
+              name: "Drake",
+              artistId: 6,
+            },
+          ],
+        },
+        {
+          genre: "Dance",
+          artists: [
+            {
+              name: "Cheat Codes",
+              artistId: 7,
+            },
+            {
+              name: "Galantis",
+              artistId: 8,
+            },
+            {
+              name: "VAVO",
+              artistId: 9,
+            },
+            {
+              name: "Sam Feldt",
+              artistId: 10,
+            },
+            {
+              name: "Lost Kings",
+              artistId: 11,
+            },
+            {
+              name: "A-Track",
+              artistId: 12,
+            },
+          ],
+        },
+        {
+          genre: "Pop",
+          artists: [
+            {
+              name: "Noah Cyrus",
+              artistId: 13,
+            },
+            {
+              name: "Kelly Clarkson",
+              artistId: 14,
+            },
+            {
+              name: "Katy Perry",
+              artistId: 15,
+            },
+            {
+              name: "Jay Sean",
+              artistId: 16,
+            },
+            {
+              name: "Fergie",
+              artistId: 17,
+            },
+            {
+              name: "Gnash",
+              artistId: 18,
+            },
+          ],
+        },
       ],
     };
   }
