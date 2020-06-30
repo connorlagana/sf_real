@@ -504,6 +504,19 @@
     & .midFH {
     }
   }
+
+  & .TitleNewMix {
+    // background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .tf {
+      background-color: rgb(82, 82, 82);
+      color: white;
+      width: 30vw;
+      font-size: 14vh;
+    }
+  }
 }
 
 .types {
@@ -564,6 +577,26 @@
     & button:hover {
       background-color: black;
       color: white;
+    }
+  }
+}
+
+.ChosenArtists {
+  background-color: rgb(165, 55, 55);
+  padding: 5vh;
+  & #title {
+    color: white;
+    font-size: 5vh;
+  }
+
+  & .artists {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: yellow;
+
+    & .chip {
     }
   }
 }

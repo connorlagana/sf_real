@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
-import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
-import { Link } from "react-router-dom";
-import { TextField } from "@material-ui/core";
+import NewMixHeader from "./NewMixHeader.js";
+import ChosenArtists from "./ChosenArtists.js";
+import TitleNewMix from "./TitleNewMix.js";
 
 import ReactAudioPlayer from "react-audio-player";
 import powfu from "../../songtest/powfu.mp3";
@@ -11,7 +10,24 @@ class NewMix extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      chosenArtists: ["Kanye West", "Eminem", "VAVO"],
+      chosenArtists: [
+        {
+          name: "Kanye West",
+          artistId: 1,
+        },
+        {
+          name: "Galantis",
+          artistId: 8,
+        },
+        {
+          name: "Sam Feldt",
+          artistId: 10,
+        },
+        {
+          name: "Fergie",
+          artistId: 17,
+        },
+      ],
       artists: [
         {
           genre: "rap",
@@ -104,23 +120,25 @@ class NewMix extends Component {
     };
   }
 
+  handleChipClick = () => {
+    console.log("clicking");
+  };
+
+  handleChipDelete = () => {
+    console.log("deleting");
+  };
+
   render() {
     return (
       <div className="NewMix">
-        <div className="fixedHeader">
-          <div className="topFH">
-            <Link to="/home">
-              <KeyboardArrowLeft id="left" />
-            </Link>
-            <Link to="/home">
-              <KeyboardArrowRight id="left" />
-            </Link>
-          </div>
-          <div className="midFH">
-            <label>Name of Mix: </label>
-            <TextField placeholder="ConsMix 1" />
-          </div>
-        </div>
+        <NewMixHeader />
+        <TitleNewMix />
+        <ChosenArtists
+          handleChipClick={this.handleChipClick}
+          handleChipDelete={this.handleChipDelete}
+          chosenArtists={this.state.chosenArtists}
+        />
+
         <div className="bottomNew">
           <button>Create</button>
           {/* <ReactAudioPlayer
