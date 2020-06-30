@@ -48,11 +48,11 @@ class NewMix extends Component {
         </div>
         <div className="bottomNew">
           <button>Create</button>
-          <ReactAudioPlayer
-            src="http://dl24.youtubetomp3music.com/file/youtubeT7LkwWrLFao320.mp3?fn=Powfu%20-%20break%20ups%20suck%20ass%20%F0%9F%98%9E%20(ft.%20sadeyes).mp3"
+          {/* <ReactAudioPlayer
+            src={powfu}
             autoPlay
             controls
-          />
+          /> */}
         </div>
       </div>
     );
