@@ -196,6 +196,7 @@ class NewMix extends Component {
     console.log(postId);
     console.log("deleting");
     let arr = [];
+    let chosenArr = this.state.chosenArtists;
     for (let i = 0; i < this.state.artists.length; i++) {
       let arr2 = [];
       const genre = this.state.artists[i].genre;
@@ -204,6 +205,8 @@ class NewMix extends Component {
         if (this.state.artists[i].artists[j].artistId != postId) {
           arr2.push(this.state.artists[i].artists[j]);
           console.log();
+        } else {
+          chosenArr.push(this.state.artists[i].artists[j]);
         }
       }
 
@@ -213,6 +216,7 @@ class NewMix extends Component {
       };
       arr.push(obj);
       this.setState({
+        chosenArtists: chosenArr,
         artists: arr,
       });
       console.log(arr2);
