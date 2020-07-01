@@ -22,7 +22,9 @@ const ArtistsList = (props) => {
                 <Chip
                   label={artist.name}
                   color="secondary"
-                  onClick={props.handleChipClick}
+                  onClick={(e) => {
+                    props.handleChipClick(e, artist.artistId);
+                  }}
                   name={artist.artistId}
                   clickable
                   inputProps={{

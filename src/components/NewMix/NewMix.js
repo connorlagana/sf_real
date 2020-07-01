@@ -195,19 +195,32 @@ class NewMix extends Component {
     e.preventDefault();
     console.log(postId);
     console.log("deleting");
+    let arr = [];
+    for (let i = 0; i < this.state.artists.length; i++) {
+      let arr2 = [];
+      const genre = this.state.artists[i].genre;
+      console.log(genre);
+      for (let j = 0; j < this.state.artists[i].artists.length; j++) {
+        if (this.state.artists[i].artists[j].artistId != postId) {
+          arr2.push(this.state.artists[i].artists[j]);
+          console.log();
+        }
+      }
 
-    var arr = [];
-
-    for (let i = 0; i < this.state.chosenArtists.length; i++) {
-      console.log()
-      // if (this.state.chosenArtists[i].artistId != postId) {
-      //   arr.push(this.state.chosenArtists[i]);
-      // }
+      let obj = {
+        genre: genre,
+        artists: arr2,
+      };
+      arr.push(obj);
+      this.setState({
+        artists: arr,
+      });
+      console.log(arr2);
     }
 
-    this.setState({
-      chosenArtists: arr,
-    });
+    // this.setState({
+    //   chosenArtists: arr,
+    // });
   };
 
   handleChipDelete = async (e, postId) => {
@@ -233,11 +246,13 @@ class NewMix extends Component {
       <div className="NewMix">
         <NewMixHeader />
         <ChosenArtists
-          handleChipClick={this.handleChipClick}
           handleChipDelete={this.handleChipDelete}
           chosenArtists={this.state.chosenArtists}
         />
-        <ArtistsList artists={this.state.artists} />
+        <ArtistsList
+          artists={this.state.artists}
+          handleChipClick={this.handleChipClick}
+        />
       </div>
     );
   }

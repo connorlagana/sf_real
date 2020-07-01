@@ -20,7 +20,6 @@ const ChosenArtists = (props) => {
             <Chip
               label={artist.name}
               color="secondary"
-              // onClick={props.handleChipClick}
               onDelete={(e) => {
                 props.handleChipDelete(e, artist.artistId);
               }}
