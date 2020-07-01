@@ -597,3 +597,34 @@
     }
   }
 }
+
+.ArtistsList {
+  background-color: cadetblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  width: 100vw;
+
+  & .genre {
+    background-color: rgb(190, 33, 169);
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & #title {
+      color: white;
+      font-size: 4vh;
+    }
+  }
+
+  & .underTitle {
+    background-color: royalblue;
+    overflow-y: auto;
+    height: 50vh;
+    width: 25vw;
+  }
+}
