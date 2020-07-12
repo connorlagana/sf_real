@@ -21,7 +21,7 @@ const ChosenArtists = (props) => {
               label={artist.name}
               color="secondary"
               onDelete={(e) => {
-                props.handleChipDelete(e, artist.artistId);
+                props.handleChipDelete(e, artist);
               }}
               name={artist.artistId}
               clickable

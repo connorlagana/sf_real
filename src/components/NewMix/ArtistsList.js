@@ -23,7 +23,7 @@ const ArtistsList = (props) => {
                   label={artist.name}
                   color="secondary"
                   onClick={(e) => {
-                    props.handleChipClick(e, artist.artistId);
+                    props.handleChipClick(e, artist);
                   }}
                   name={artist.artistId}
                   clickable
