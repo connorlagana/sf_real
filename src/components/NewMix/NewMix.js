@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import NewMixHeader from "./NewMixHeader.js";
 import ChosenArtists from "./ChosenArtists.js";
 import ArtistsList from "./ArtistsList.js";
+import SliderView from "./SliderView.js";
 
 // import ReactAudioPlayer from "react-audio-player";
 // import powfu from "../../songtest/powfu.mp3";
@@ -295,6 +296,7 @@ class NewMix extends Component {
           artists={this.state.artists}
           handleChipClick={this.handleChipClick}
         />
+        <SliderView />
       </div>
     );
   }

@@ -579,7 +579,6 @@
 }
 
 .ChosenArtists {
-  // background-color: rgb(165, 55, 55);
   padding: 5vh;
   & #title {
     color: white;
@@ -591,7 +590,6 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    // background-color: yellow;
 
     & .chip {
     }
@@ -599,7 +597,6 @@
 }
 
 .ArtistsList {
-  background-color: cadetblue;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -608,7 +605,6 @@
   width: 100vw;
 
   & .genre {
-    background-color: rgb(190, 33, 169);
     width: 30vw;
     display: flex;
     justify-content: center;
@@ -622,9 +618,29 @@
   }
 
   & .underTitle {
-    background-color: royalblue;
     overflow-y: auto;
     height: 50vh;
     width: 25vw;
+  }
+}
+
+.SliderView {
+  // background-color: rgb(192, 45, 45);
+
+  & .sliders {
+    width: 30vw;
+    // background-color: yellow;
+
+    & .indSlider {
+      // background-color: yellow;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & div {
+        margin: 0 1vh 0 1vh;
+        font-size: 3vh;
+      }
+    }
   }
 }
