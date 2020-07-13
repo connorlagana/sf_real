@@ -4,7 +4,7 @@ import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
 import { Link } from "react-router-dom";
 import TitleNewMix from "./TitleNewMix.js";
 
-const NewMixHeader = () => {
+const NewMixHeader = (props) => {
   return (
     <div className="fixedHeader">
       <div className="topFH">
@@ -16,7 +16,7 @@ const NewMixHeader = () => {
         </Link>
       </div>
       <div className="midFH">
-        <TitleNewMix />
+        <TitleNewMix handleTitleChange={props.handleTitleChange} />
       </div>
     </div>
   );

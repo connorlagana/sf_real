@@ -14,12 +14,14 @@ const inputProps = {
   color: "white",
 };
 
-const TitleNewMix = () => {
+const TitleNewMix = (props) => {
   return (
     <div className="TitleNewMix">
       <MuiThemeProvider theme={theme1}>
         <TextField
           className="tf"
+          onChange={props.handleTitleChange}
+          name="title"
           color="secondary"
           id="filled-basic"
           label="Title of your mix"

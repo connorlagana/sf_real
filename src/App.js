@@ -17,28 +17,8 @@ class App extends Component {
 
     this.state = {
       currentUser: true,
-      mix: {
-        instrumental: ["instrumental1", "instrumental2", "instrumental3"],
-        firstV: ["firstV1", "firstV2", "firstV3"],
-        secondV: ["secondV1", "secondV2", "secondV3"],
-        vox: ["vox1", "vox2", "vox3"],
-        drop: ["drop1", "drop2"],
-        chorus: ["chorus1", "chorus2", "chorus3", "chorus4"],
-        // name: ["bigbootie18"],
-      },
-      chosenSong: "",
     };
   }
-
-  obj = {
-    instrumental: "instrumental3",
-    firstV: "firstV2",
-    secondV: "secondV1",
-    vox: "vox2",
-    drop: "drop1",
-    chorus: "chorus2",
-    name: "consmix2",
-  };
 
   createMix = async (e, musicData) => {
     e.preventDefault();

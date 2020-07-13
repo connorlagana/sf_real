@@ -7,10 +7,13 @@ import CreateMixButton from "./CreateMixButton.js";
 // import ReactAudioPlayer from "react-audio-player";
 // import powfu from "../../songtest/powfu.mp3";
 
+import { newPost, postDetails } from "../../services/api_helper.js";
+
 class NewMix extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      title: "",
       ratings: {
         rap: 0,
         dance: 0,
@@ -236,9 +239,23 @@ class NewMix extends Component {
     };
   }
 
+  handleTitleChange = (e) => {
+    const { name, value } = e.target;
+    this.setState({
+      [name]: value,
+    });
+  };
+
   handleCreateMix = (e) => {
     e.preventDefault();
-    console.log("Hello Friday");
+    console.log("Creating a mix");
+
+    let obj = {
+      title: this.state.title,
+      mix: "mix1",
+    };
+
+    newPost(obj);
   };
 
   handleChipClick = (e, post) => {
@@ -297,7 +314,7 @@ class NewMix extends Component {
   render() {
     return (
       <div className="NewMix">
-        <NewMixHeader />
+        <NewMixHeader handleTitleChange={this.handleTitleChange} />
         <ChosenArtists
           handleChipDelete={this.handleChipDelete}
           chosenArtists={this.state.chosenArtists}
