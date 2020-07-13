@@ -592,6 +592,9 @@
     align-items: flex-start;
 
     & .chip {
+      // height: 30vh;
+      // width: 100vw;
+      // background-color: yellow;
     }
   }
 }
@@ -625,22 +628,31 @@
 }
 
 .SliderView {
-  background-color: rgb(192, 45, 45);
+  // background-color: rgb(192, 45, 45);
 
   & .sliders {
     width: 30vw;
-    background-color: yellow;
+    height: 30vh;
+    // background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
 
     & .indSlider {
-      background-color: cyan;
+      // background-color: cyan;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       font-size: 3vh;
+      height: 20vh;
+      width: 30vw;
+      margin: 1vh;
+      color: white;
 
       & .belowTitle {
-        background-color: blueviolet;
+        // background-color: blueviolet;
         width: 30vw;
         display: flex;
         justify-content: center;

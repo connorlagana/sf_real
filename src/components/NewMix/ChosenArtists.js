@@ -16,7 +16,7 @@ const ChosenArtists = (props) => {
       <div id="title">Chosen Artists: {props.chosenArtists.length}</div>
       <div className="artists">
         {props.chosenArtists.map((artist) => (
-          <MuiThemeProvider theme={theme1} id="chip">
+          <MuiThemeProvider theme={theme1} className="chip">
             <Chip
               label={artist.name}
               color="secondary"

@@ -31,7 +31,7 @@ const HomeHeader = (props) => {
             </Link>
           </li>
           <li>
-            <Link to="/login" className="link">
+            <Link to="/profile" className="link">
               {props.currentUser.username}
             </Link>
           </li>

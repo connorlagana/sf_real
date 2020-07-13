@@ -3,7 +3,7 @@ import NewMixHeader from "./NewMixHeader.js";
 import ChosenArtists from "./ChosenArtists.js";
 import ArtistsList from "./ArtistsList.js";
 import SliderView from "./SliderView.js";
-
+import CreateMixButton from "./CreateMixButton.js";
 // import ReactAudioPlayer from "react-audio-player";
 // import powfu from "../../songtest/powfu.mp3";
 
@@ -236,6 +236,11 @@ class NewMix extends Component {
     };
   }
 
+  handleCreateMix = (e) => {
+    e.preventDefault();
+    console.log("Hello Friday");
+  };
+
   handleChipClick = (e, post) => {
     e.preventDefault();
     let unchosenArr;
@@ -302,6 +307,7 @@ class NewMix extends Component {
           handleChipClick={this.handleChipClick}
         />
         <SliderView />
+        <CreateMixButton handleCreateMix={this.handleCreateMix} />
       </div>
     );
   }
