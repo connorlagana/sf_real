@@ -10,19 +10,21 @@ const HomeMixes = (props) => {
   return (
     <div className="HomeMixes">
       {props.songs.map((song) => (
-        <div className="song">
-          <div className="leftSong">
-            <div id="square" className={song.color} />
-            <div id="songName">{song.name}</div>
-          </div>
-          <div className="rightSong">
-            <img src={share} id="share" />
-            <div>
-              {song.min}:{song.sec}
+        <Link to="/yourmix">
+          <div className="song">
+            <div className="leftSong">
+              <div id="square" className="grad4" />
+              <div id="songName">{song.title}</div>
             </div>
-            <img src={play} id="play" />
+            <div className="rightSong">
+              <img src={share} id="share" />
+              <div>
+                {song.min}:{song.sec}
+              </div>
+              <img src={play} id="play" />
+            </div>
           </div>
-        </div>
+        </Link>
       ))}
 
       <div className="song">
