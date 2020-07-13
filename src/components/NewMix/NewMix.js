@@ -11,6 +11,11 @@ class NewMix extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      ratings: {
+        rap: 0,
+        dance: 0,
+        pop: 0,
+      },
       chosenArtists: [],
       artists: [
         {
