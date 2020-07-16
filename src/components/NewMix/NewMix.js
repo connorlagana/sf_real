@@ -252,7 +252,7 @@ class NewMix extends Component {
 
     let obj = {
       title: this.state.title,
-      mix: "mix1",
+      mix: "https://media.vocaroo.com/mp3/1ohtk7IZgs5",
     };
 
     newPost(obj);
