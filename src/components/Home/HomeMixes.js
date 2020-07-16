@@ -3,28 +3,32 @@ import share from "../../icons/share.png";
 import play from "../../icons/play.png";
 import pause from "../../icons/pause.png";
 import plus from "../../icons/plus.png";
+import ReactAudioPlayer from "react-audio-player";
 
 import { Link } from "react-router-dom";
+
+const songUrl = "https://media.vocaroo.com/mp3/1ohtk7IZgs5";
 
 const HomeMixes = (props) => {
   return (
     <div className="HomeMixes">
       {props.songs.map((song) => (
-        <Link to="/yourmix">
-          <div className="song">
-            <div className="leftSong">
-              <div id="square" className="grad4" />
-              <div id="songName">{song.title}</div>
-            </div>
-            <div className="rightSong">
-              <img src={share} id="share" />
-              <div>
-                {song.min}:{song.sec}
-              </div>
-              <img src={play} id="play" />
-            </div>
+        // <Link to="/yourmix">
+        <div className="song">
+          <div className="leftSong">
+            <div id="square" className="grad4" />
+            <div id="songName">{song.title}</div>
+            <ReactAudioPlayer src={song.mix} controls />
           </div>
-        </Link>
+          <div className="rightSong">
+            <img src={share} id="share" />
+            <div>
+              {song.min}:{song.sec}
+            </div>
+            <img src={play} id="play" />
+          </div>
+        </div>
+        // </Link>
       ))}
 
       <div className="song">
