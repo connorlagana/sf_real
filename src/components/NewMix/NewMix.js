@@ -4,6 +4,7 @@ import ChosenArtists from "./ChosenArtists.js";
 import ArtistsList from "./ArtistsList.js";
 import SliderView from "./SliderView.js";
 import CreateMixButton from "./CreateMixButton.js";
+import Popup from "reactjs-popup";
 // import ReactAudioPlayer from "react-audio-player";
 // import powfu from "../../songtest/powfu.mp3";
 
@@ -325,6 +326,9 @@ class NewMix extends Component {
         />
         <SliderView />
         <CreateMixButton handleCreateMix={this.handleCreateMix} />
+        <Popup trigger={<button> Trigger</button>} position="right center">
+          <div>Popup content here !!</div>
+        </Popup>
       </div>
     );
   }
