@@ -10,6 +10,32 @@ import Popup from "reactjs-popup";
 
 import { newPost, postDetails } from "../../services/api_helper.js";
 
+const rapArtists = [
+  "J Cole",
+  "Blackbear",
+  "Aries",
+  "YBN Nahmir",
+  "Convolk",
+  "Guardin",
+  "Brakence",
+  "Kyle",
+  "Young Money",
+  "Call Me Karizma",
+  "G Eazy",
+  "Sammy Adams",
+  "DaBaby",
+  "Cardi B",
+  "Lil Peep",
+  "Big Sean",
+  "Schoolboy Q",
+  "Drake",
+  "T-Pain",
+  "Machine Gun Kelly",
+  "Notorious B.I.G",
+];
+
+const popArtists = [];
+
 class NewMix extends Component {
   constructor(props) {
     super(props);
@@ -21,222 +47,7 @@ class NewMix extends Component {
         pop: 0,
       },
       chosenArtists: [],
-      artists: [
-        {
-          genre: "Rap",
-          artists: [
-            {
-              name: "Kanye West",
-              artistId: 1,
-              genre: "Rap",
-            },
-            {
-              name: "Big L",
-              artistId: 2,
-              genre: "Rap",
-            },
-            {
-              name: "Eminem",
-              artistId: 3,
-              genre: "Rap",
-            },
-            {
-              name: "Jay-Z",
-              artistId: 4,
-              genre: "Rap",
-            },
-            {
-              name: "ASAP Rocky",
-              artistId: 5,
-              genre: "Rap",
-            },
-            {
-              name: "Drake",
-              artistId: 6,
-              genre: "Rap",
-            },
-            {
-              name: "Jalen Santoy",
-              artistId: 100,
-              genre: "Rap",
-            },
-            {
-              name: "Hopsin",
-              artistId: 101,
-              genre: "Rap",
-            },
-            {
-              name: "IshDARR",
-              artistId: 102,
-              genre: "Rap",
-            },
-            {
-              name: "K CAMP",
-              artistId: 103,
-              genre: "Rap",
-            },
-            {
-              name: "Kid Cudi",
-              artistId: 104,
-              genre: "Rap",
-            },
-            {
-              name: "Kanye West",
-              artistId: 105,
-              genre: "Rap",
-            },
-            {
-              name: "Big L",
-              artistId: 106,
-              genre: "Rap",
-            },
-            {
-              name: "Eminem",
-              artistId: 107,
-              genre: "Rap",
-            },
-            {
-              name: "Jay-Z",
-              artistId: 108,
-              genre: "Rap",
-            },
-            {
-              name: "ASAP Rocky",
-              artistId: 109,
-              genre: "Rap",
-            },
-            {
-              name: "Drake",
-              artistId: 110,
-            },
-            {
-              name: "Jalen Santoy",
-              artistId: 111,
-              genre: "Rap",
-            },
-            {
-              name: "Hopsin",
-              artistId: 112,
-              genre: "Rap",
-            },
-            {
-              name: "IshDARR",
-              artistId: 113,
-              genre: "Rap",
-            },
-            {
-              name: "K CAMP",
-              artistId: 114,
-              genre: "Rap",
-            },
-            {
-              name: "Kid Cudi",
-              artistId: 115,
-              genre: "Rap",
-            },
-          ],
-        },
-        {
-          genre: "Dance",
-          artists: [
-            {
-              name: "Cheat Codes",
-              artistId: 11117,
-              genre: "Dance",
-            },
-            {
-              name: "Galantis",
-              artistId: 1118,
-              genre: "Dance",
-            },
-            {
-              name: "VAVO",
-              artistId: 119,
-              genre: "Dance",
-            },
-            {
-              name: "Sam Feldt",
-              artistId: 1110,
-              genre: "Dance",
-            },
-            {
-              name: "Lost Kings",
-              artistId: 11,
-              genre: "Dance",
-            },
-            {
-              name: "A-Track",
-              artistId: 1112,
-              genre: "Dance",
-            },
-            {
-              name: "Cheat Codes",
-              artistId: 1117,
-              genre: "Dance",
-            },
-            {
-              name: "Galantis",
-              artistId: 118,
-              genre: "Dance",
-            },
-            {
-              name: "VAVO",
-              artistId: 119,
-              genre: "Dance",
-            },
-            {
-              name: "Sam Feldt",
-              artistId: 110,
-              genre: "Dance",
-            },
-            {
-              name: "Lost Kings",
-              artistId: 111,
-              genre: "Dance",
-            },
-            {
-              name: "A-Track",
-              artistId: 112,
-              genre: "Dance",
-            },
-          ],
-        },
-        {
-          genre: "Pop",
-          artists: [
-            {
-              name: "Noah Cyrus",
-              artistId: 13,
-              genre: "Pop",
-            },
-            {
-              name: "Kelly Clarkson",
-              artistId: 14,
-              genre: "Pop",
-            },
-            {
-              name: "Katy Perry",
-              artistId: 15,
-              genre: "Pop",
-            },
-            {
-              name: "Jay Sean",
-              artistId: 16,
-              genre: "Pop",
-            },
-            {
-              name: "Fergie",
-              artistId: 17,
-              genre: "Pop",
-            },
-            {
-              name: "Gnash",
-              artistId: 18,
-              genre: "Pop",
-            },
-          ],
-        },
-      ],
+      artists: [],
     };
   }
 
