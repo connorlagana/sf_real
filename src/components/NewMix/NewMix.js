@@ -61,6 +61,54 @@ const popArtists = [
   "Florida Georgia Line",
 ];
 
+const oldiesArtists = [
+  "Creedence Clearwater Revival",
+  "Elton John",
+  "Bee Gees",
+  "The Beatles",
+  "Tom Petty",
+  "Journey",
+  "Boston",
+  "Pat Benatar",
+  "Cyndi Lauper",
+  "Rick Springfield",
+  "Survivor",
+  "Michael Jackson",
+  "Chumbawamba",
+  "The Doobie Brothers",
+  "The Rolling Stones",
+  "The Allman Brothers Band",
+  "Cher",
+  "Diana Ross",
+];
+
+const danceArtists = [
+  "Cheat Codes",
+  "Party Favor",
+  "Alan Walker",
+  "Galantis",
+  "Martin Garrix",
+  "Dante Klein",
+  "Mako",
+  "Don Diablo",
+  "Jonas Aden",
+  "Brooks",
+  "Audien",
+];
+
+const createObjArtists = (arr, genre) => {
+  let artArrObj = [];
+  for (let i = 0; i < arr.length; i++) {
+    let obj = {
+      name: arr[i],
+      genre: genre,
+    };
+    artArrObj.push(obj);
+  }
+  // artArrObj.sort();
+  return artArrObj;
+};
+
 class NewMix extends Component {
   constructor(props) {
     super(props);
@@ -74,6 +122,36 @@ class NewMix extends Component {
       chosenArtists: [],
       artists: [],
     };
+  }
+
+  componentDidMount() {
+    const pop = createObjArtists(popArtists, "Pop");
+    const rap = createObjArtists(rapArtists, "Rap");
+    const dance = createObjArtists(danceArtists, "Dance");
+    const oldies = createObjArtists(oldiesArtists, "Olides");
+
+    this.setState({
+      artists: [
+        {
+          genre: "Pop",
+          artists: pop,
+        },
+        {
+          genre: "Rap",
+          artists: rap,
+        },
+        {
+          genre: "Dance",
+          artists: dance,
+        },
+        {
+          genre: "Oldies",
+          artists: oldies,
+        },
+      ],
+    });
+
+    console.log(this.state);
   }
 
   handleTitleChange = (e) => {
