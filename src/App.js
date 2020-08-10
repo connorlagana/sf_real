@@ -76,6 +76,9 @@ class App extends Component {
           <Route path="/register">
             <Register handleRegister={this.handleRegister} />
           </Route>
+          {/* <Route path="/login">
+            <Register handleRegister={this.handleRegister} />
+          </Route> */}
         </>
       );
     }
@@ -99,33 +102,6 @@ class App extends Component {
         </Switch>
       </>
     );
-    // return (
-    //   <div className="App">
-    //     {!this.state.currentUser.username ? (
-    //       <>
-    //         <Redirect to="/" />
-    //         <Route exact path="/">
-    //           <FrontPage />
-    //         </Route>
-    //         <Route path="/register">
-    //           <Register handleRegister={this.handleRegister} />
-    //         </Route>
-    //       </>
-    //     ) : (
-    //       <>
-    //         <Redirect to="/home" />
-    //         <Route
-    //           exact
-    //           path="/home"
-    //           render={() => <Home currentUser={this.state.currentUser} />}
-    //         />
-    //         <div id="title">Sound Flex</div>
-    //         <TypeList types={this.state.types} />
-    //         <CreateMixButton createMix={this.createMix} />
-    //       </>
-    //     )}
-    //   </div>
-    // );
   }
 }
 
