@@ -14,7 +14,7 @@ const HomeHeader = (props) => {
         <br />
       </div>
       <div className="rightHH">
-        <ul>
+        {/* <ul>
           <li>
             <Link to="/home" className="link">
               Home
@@ -35,7 +35,7 @@ const HomeHeader = (props) => {
               {props.currentUser.username}
             </Link>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </div>
   );

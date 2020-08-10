@@ -43,8 +43,6 @@ class Home extends Component {
           songs={this.state.songs}
           handleSoloClick={this.handleSoloClick}
         />
-        {/* <div> Hello World, This is the home page</div> */}
-        <SoloMix />
       </div>
     );
   }

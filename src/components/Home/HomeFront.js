@@ -6,7 +6,6 @@ const HomeFront = (props) => {
     <div className="HomeFront">
       <div id="numMix">Mixes: {props.songs.length}</div>
       <HomeMixes songs={props.songs} handleSoloClick={props.handleSoloClick} />
-      <div>me</div>
     </div>
   );
 };
