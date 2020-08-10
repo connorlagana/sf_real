@@ -34,7 +34,32 @@ const rapArtists = [
   "Notorious B.I.G",
 ];
 
-const popArtists = [];
+const popArtists = [
+  "Jason Derulo",
+  "Jay Sean",
+  "Loote",
+  "Weezer",
+  "Pink",
+  "Kelly Clarkson",
+  "Trevor Daniel",
+  "Arizona Zervas",
+  "100 gecs",
+  "Andy Grammer",
+  "Timeflies",
+  "Wallpaper.",
+  "Lizzo",
+  "Camila Cabello",
+  "Bruno Mars",
+  "Goody Grace",
+  "Green Day",
+  "Blink-182",
+  "Franz Ferdinand",
+  "Lifehouse",
+  "Sean Paul",
+  "Jay Sean",
+  "Sia",
+  "Florida Georgia Line",
+];
 
 class NewMix extends Component {
   constructor(props) {
