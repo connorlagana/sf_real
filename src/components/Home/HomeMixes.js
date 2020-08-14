@@ -1,13 +1,13 @@
 import React from "react";
 import share from "../../icons/share.png";
 import play from "../../icons/play.png";
-import pause from "../../icons/pause.png";
+// import pause from "../../icons/pause.png";
 import plus from "../../icons/plus.png";
 import ReactAudioPlayer from "react-audio-player";
 
 import { Link } from "react-router-dom";
 
-const songUrl = "https://media.vocaroo.com/mp3/1ohtk7IZgs5";
+// const songUrl = "https://media.vocaroo.com/mp3/1ohtk7IZgs5";
 
 const HomeMixes = (props) => {
   return (
@@ -21,11 +21,11 @@ const HomeMixes = (props) => {
             <ReactAudioPlayer src={song.mix} controls />
           </div>
           <div className="rightSong">
-            <img src={share} id="share" />
+            <img src={share} id="share" alt="" />
             <div>
               {song.min}:{song.sec}
             </div>
-            <img src={play} id="play" />
+            <img src={play} id="play" alt="" />
           </div>
         </div>
         // </Link>
@@ -35,7 +35,7 @@ const HomeMixes = (props) => {
         <Link to="/new">
           <div className="leftSong">
             <div id="square" className="add">
-              <img src={plus} id="plus" />
+              <img src={plus} id="plus" alt="" />
             </div>
             <div id="songName">Create New Mix</div>
           </div>

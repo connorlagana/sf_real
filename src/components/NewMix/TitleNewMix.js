@@ -10,9 +10,9 @@ const theme1 = createMuiTheme({
   },
 });
 
-const inputProps = {
-  color: "white",
-};
+// const inputProps = {
+//   color: "white",
+// };
 
 const TitleNewMix = (props) => {
   return (

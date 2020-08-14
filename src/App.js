@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.scss";
 
-import { loginUser, registerUser, verifyUser } from "./services/api_helper";
+import { registerUser } from "./services/api_helper";
 
 import TypeList from "./components/TypeList";
 import CreateMixButton from "./components/CreateMixButton";
@@ -40,8 +40,8 @@ class App extends Component {
     //This is the maximum amount of songs we can make from the users selection
     console.log("the lowest number is: " + low);
 
-    for (const el in this.state.mix) {
-    }
+    // for (const el in this.state.mix) {
+    // }
 
     // let audio = new Audio(songCreated);
 

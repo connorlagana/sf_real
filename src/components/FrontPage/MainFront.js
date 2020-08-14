@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 let obj = [
   "https://i.scdn.co/image/ab67616d0000b2732b517912fd69652ff10d8e11",
@@ -68,7 +68,7 @@ const MainFront = () => {
           // </div>
 
           <div className="art">
-            <img src={art} />
+            <img src={art} alt="" />
           </div>
         ))}
       </div>

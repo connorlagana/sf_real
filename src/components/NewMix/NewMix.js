@@ -8,7 +8,7 @@ import Popup from "reactjs-popup";
 // import ReactAudioPlayer from "react-audio-player";
 // import powfu from "../../songtest/powfu.mp3";
 
-import { newPost, postDetails } from "../../services/api_helper.js";
+import { newPost } from "../../services/api_helper.js";
 
 const rapArtists = [
   "J Cole",

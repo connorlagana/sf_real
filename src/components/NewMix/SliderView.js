@@ -1,17 +1,17 @@
 import React from "react";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
+// import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Slider from "@material-ui/core/Slider";
 
-const useStyles = makeStyles({
-  root: {
-    width: 300,
-  },
+// const useStyles = makeStyles({
+//   root: {
+//     width: 300,
+//   },
 
-  thumb: {
-    height: 28,
-    width: 28,
-  },
-});
+//   thumb: {
+//     height: 28,
+//     width: 28,
+//   },
+// });
 
 function valuetext(value) {
   return `${value}°C`;
@@ -33,7 +33,6 @@ const genres = [
     name: "Oldies",
     num: 40,
   },
-
 ];
 
 const SliderView = () => {
@@ -46,7 +45,7 @@ const SliderView = () => {
               {genre.name}: {}
             </div>
             <div className="belowTitle">
-              <div>👎🏻</div>
+              <div>Like</div>
               <Slider
                 defaultValue={genre.num}
                 getAriaValueText={valuetext}
@@ -57,7 +56,7 @@ const SliderView = () => {
                 min={0}
                 max={100}
               />
-              <div>🔥</div>
+              <div>Dislike</div>
             </div>
           </div>
         ))}

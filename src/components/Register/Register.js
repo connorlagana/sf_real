@@ -37,8 +37,8 @@ class Register extends Component {
     return (
       <div className="Register">
         <div className="logos">
-          <img id="circleLogo" src={circleLogo} />
-          <img id="wordLogo" src={logo1} />
+          <img id="circleLogo" src={circleLogo} alt="" />
+          <img id="wordLogo" src={logo1} alt="" />
         </div>
         <form>
           <input

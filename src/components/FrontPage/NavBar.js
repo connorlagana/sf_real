@@ -9,8 +9,8 @@ const NavBar = () => {
     <div className="NavBar">
       <div className="leftNav">
         <div className="logoDiv">
-          <img id="circleLogo" src={circleLogo} />
-          <img id="wordLogo" src={logo2} />
+          <img id="circleLogo" src={circleLogo} alt="" />
+          <img id="wordLogo" src={logo2} alt="" />
         </div>
         <br></br>
       </div>

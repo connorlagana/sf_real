@@ -11,7 +11,7 @@ class Artist extends Component {
         {this.props.artists.map((artist) => (
           <div className="artist">
             <div id="artistTitle">{artist.artist}</div>
-            <img src={artist.image} />
+            <img src={artist.image} alt="" />
             <button>Add to mix</button>
           </div>
         ))}

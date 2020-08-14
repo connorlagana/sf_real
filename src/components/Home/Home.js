@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import HomeHeader from "./HomeHeader.js";
 import HomeFront from "./HomeFront.js";
-import SoloMix from "../SoloMix/SoloMix.js";
-import { Route } from "react-router-dom";
+// import SoloMix from "../SoloMix/SoloMix.js";
+// import { Route } from "react-router-dom";
 import { postDetails } from "../../services/api_helper.js";
 
 class Home extends Component {
