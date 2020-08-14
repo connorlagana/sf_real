@@ -102,6 +102,7 @@ const createObjArtists = (arr, genre) => {
     let obj = {
       name: arr[i],
       genre: genre,
+      artistId: `${genre}${i}`,
     };
     artArrObj.push(obj);
   }
@@ -128,7 +129,7 @@ class NewMix extends Component {
     const pop = createObjArtists(popArtists, "Pop");
     const rap = createObjArtists(rapArtists, "Rap");
     const dance = createObjArtists(danceArtists, "Dance");
-    const oldies = createObjArtists(oldiesArtists, "Olides");
+    const oldies = createObjArtists(oldiesArtists, "Oldies");
 
     this.setState({
       artists: [
@@ -179,12 +180,14 @@ class NewMix extends Component {
     let chosenArr = this.state.chosenArtists;
 
     //check to see what genre you should remove the artist from
-    if (post.genre === "Rap") {
+    if (post.genre === "Pop") {
       unchosenArr = this.state.artists[0].artists;
-    } else if (post.genre === "Dance") {
+    } else if (post.genre === "Rap") {
       unchosenArr = this.state.artists[1].artists;
-    } else if (post.genre === "Pop") {
+    } else if (post.genre === "Dance") {
       unchosenArr = this.state.artists[2].artists;
+    } else if (post.genre === "Oldies") {
+      unchosenArr = this.state.artists[3].artists;
     }
     // unchosenArr.filter((a) => a.genre != "Rap");
 
@@ -205,12 +208,14 @@ class NewMix extends Component {
     let unchosenArr;
     let chosenArr = this.state.chosenArtists;
 
-    if (post.genre === "Rap") {
+    if (post.genre === "Pop") {
       unchosenArr = this.state.artists[0].artists;
-    } else if (post.genre === "Dance") {
+    } else if (post.genre === "Rap") {
       unchosenArr = this.state.artists[1].artists;
-    } else if (post.genre === "Pop") {
+    } else if (post.genre === "Dance") {
       unchosenArr = this.state.artists[2].artists;
+    } else if (post.genre === "Oldies") {
+      unchosenArr = this.state.artists[3].artists;
     }
 
     //remove from chosenArr

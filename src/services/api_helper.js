@@ -1,12 +1,12 @@
 import axios from "axios";
 
-const api = axios.create({
-  baseURL: "http://localhost:3001",
-});
-
 // const api = axios.create({
-//   baseURL: "https://mighty-woodland-57875.herokuapp.com/"
+//   baseURL: "http://localhost:3000",
 // });
+
+const api = axios.create({
+  baseURL: "https://git.heroku.com/soundflexio.git",
+});
 
 // AUTH API_HELPER API CALLS
 
