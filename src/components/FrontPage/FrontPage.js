@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import NavBar from "./NavBar.js";
 import MainFront from "./MainFront.js";
-import FrontFooter from "./FrontFooter.js";
 
 class FrontPage extends Component {
   constructor(props) {
@@ -13,7 +11,6 @@ class FrontPage extends Component {
       <div className="FrontPage">
         {/* <NavBar /> */}
         <MainFront />
-        
       </div>
     );
   }

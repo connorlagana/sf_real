@@ -71,7 +71,7 @@ class App extends Component {
       return (
         <>
           <NavBar />
-          <Redirect to="/" />
+          <Redirect to="/about" />
 
           <Route exact path="/">
             <FrontPage />
