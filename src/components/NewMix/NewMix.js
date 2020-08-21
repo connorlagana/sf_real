@@ -10,6 +10,39 @@ import Popup from "reactjs-popup";
 
 import { newPost } from "../../services/api_helper.js";
 
+const findBestMatch = (arr) => {
+  const mix1 = ["a", "b", "c", "d", "e", "f"];
+  const mix2 = ["a", "d", "e", "f"];
+  const mix3 = ["b", "d", "e", "f", "g"];
+  const mix4 = ["b", "d", "e", "f", "g", "h"];
+
+  const mixes = [mix1, mix2, mix3, mix4];
+  const mixesNames = ["mix1", "mix2", "mix3", "mix4"];
+
+  let highScore = 0;
+  let highScoreIndex = 0;
+
+  for (let i = 0; i < mixes.length; i++) {
+    let count = 0;
+    for (let j = 0; j < arr.length; j++) {
+      const mix = mixes[i];
+      if (mix.includes(arr[j])) {
+        count += 1;
+      }
+    }
+
+    if (count > highScore) {
+      highScore = count;
+      highScoreIndex = i;
+    }
+  }
+
+  const bestMatchMix = mixesNames[highScoreIndex];
+
+  console.log(bestMatchMix);
+  return bestMatchMix;
+};
+
 const rapArtists = [
   "J Cole",
   "Blackbear",
@@ -165,10 +198,25 @@ class NewMix extends Component {
   handleCreateMix = (e) => {
     e.preventDefault();
     console.log("Creating a mix");
+    const chosenArtistsState = this.state.chosenArtists;
+    let chosenArtists = [];
+    console.log(chosenArtistsState);
+
+    //Create array of artists names
+    for (let i = 0; i < chosenArtistsState.length; i++) {
+      const name = chosenArtistsState[i].name;
+
+      chosenArtists.push(name);
+    }
+
+    console.log(chosenArtists);
+
+    //Find best match
+    const best = findBestMatch(chosenArtists);
 
     let obj = {
       title: this.state.title,
-      mix: "https://media.vocaroo.com/mp3/1ohtk7IZgs5",
+      mix: best,
     };
 
     newPost(obj);
@@ -201,6 +249,7 @@ class NewMix extends Component {
     chosenArr.push(post);
 
     this.setState({});
+    console.log(this.state);
   };
 
   handleChipDelete = async (e, post) => {

@@ -8,7 +8,7 @@ const CreateMixButton = (props) => {
           props.handleCreateMix(e);
         }}
       >
-        Hello World
+        Create Mix
       </button>
     </div>
   );

@@ -10,6 +10,7 @@ import Home from "./components/Home/Home.js";
 import { Route, Redirect, Switch } from "react-router-dom";
 import Register from "./components/Register/Register";
 import NewMix from "./components/NewMix/NewMix.js";
+import About from "./components/About/About.js";
 
 class App extends Component {
   constructor(props) {
@@ -76,6 +77,9 @@ class App extends Component {
           <Route path="/register">
             <Register handleRegister={this.handleRegister} />
           </Route>
+          <Route path="/about">
+            <About />
+          </Route>
           {/* <Route path="/login">
             <Register handleRegister={this.handleRegister} />
           </Route> */}
@@ -84,7 +88,7 @@ class App extends Component {
     }
     return (
       <>
-        <Redirect to="/new" />
+        <Redirect to="/home" />
         <Switch>
           <Route
             exact
