@@ -4,9 +4,37 @@
   width: 100vw;
 
   & .WhatIs {
-    height: 40vh;
+    // height: 40vh;
     width: 100vw;
     background-color: cadetblue;
     margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .top {
+      background-color: chartreuse;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+    }
+    & .left {
+      background-color: blueviolet;
+      width: 50vw;
+      height: 40vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // transform: rotate(-20deg);
+      font-size: 4vh;
+    }
+    & .right {
+      background-color: coral;
+      width: 50vw;
+      height: 40vh;
+    }
   }
 }

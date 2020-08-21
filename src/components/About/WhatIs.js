@@ -3,8 +3,9 @@ import React, { Component } from "react";
 const WhatIs = () => {
   return (
     <div className="WhatIs">
-      <div>
-        <div>What Is SoundFlex?</div>
+      <div className="top">
+        <div className="left">What Is SoundFlex?</div>
+        <div className="right">SoundFlex is....</div>
       </div>
     </div>
   );
