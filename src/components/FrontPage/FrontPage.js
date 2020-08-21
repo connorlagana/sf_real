@@ -11,9 +11,9 @@ class FrontPage extends Component {
   render() {
     return (
       <div className="FrontPage">
-        <NavBar />
+        {/* <NavBar /> */}
         <MainFront />
-        <FrontFooter />
+        
       </div>
     );
   }

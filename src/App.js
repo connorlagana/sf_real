@@ -6,6 +6,8 @@ import { registerUser } from "./services/api_helper";
 import TypeList from "./components/TypeList";
 import CreateMixButton from "./components/CreateMixButton";
 import FrontPage from "./components/FrontPage/FrontPage.js";
+import NavBar from "./components/FrontPage/NavBar.js";
+import FrontFooter from "./components/FrontPage/FrontFooter.js";
 import Home from "./components/Home/Home.js";
 import { Route, Redirect, Switch } from "react-router-dom";
 import Register from "./components/Register/Register";
@@ -68,6 +70,7 @@ class App extends Component {
     if (this.state.currentUser === false) {
       return (
         <>
+          <NavBar />
           <Redirect to="/" />
 
           <Route exact path="/">
@@ -83,6 +86,7 @@ class App extends Component {
           {/* <Route path="/login">
             <Register handleRegister={this.handleRegister} />
           </Route> */}
+          <FrontFooter />
         </>
       );
     }
