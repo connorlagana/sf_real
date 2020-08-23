@@ -12,7 +12,7 @@ import mix4 from "../../mixes/Mix4.mp3";
 import { Link } from "react-router-dom";
 const mixes = [mix1, mix2, mix3, mix4];
 
-const songUrl = "https://media.vocaroo.com/mp3/1ohtk7IZgs5";
+// const songUrl = "https://media.vocaroo.com/mp3/1ohtk7IZgs5";
 
 const HomeMixes = (props) => {
   return (

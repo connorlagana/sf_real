@@ -27,8 +27,8 @@ class Home extends Component {
 
   fetchUsersMixes = async () => {
     console.log("fetching user mixes");
-    const userid = this.state.currentUser.id;
-    const resp = await postDetails(userid);
+    // const userid = this.state.currentUser.id;
+    const resp = await postDetails(1);
 
     console.log(resp.data);
     this.setState({

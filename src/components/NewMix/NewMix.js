@@ -184,9 +184,17 @@ class NewMix extends Component {
         },
       ],
     });
-
+    // console.log("fuck");
     console.log(this.state);
+
+    // this.fetchPosts();
   }
+
+  // fetchPosts = async () => {
+  //   const posts = await showPost(1);
+
+  //   console.log("these are posts", posts);
+  // };
 
   handleTitleChange = (e) => {
     const { name, value } = e.target;
