@@ -23,7 +23,7 @@ const HomeMixes = (props) => {
           <div className="leftSong">
             <div id="square" className="grad4" />
             <div id="songName">{song.title}</div>
-            <ReactAudioPlayer src={mixes[song.mix]} controls />
+            <ReactAudioPlayer src={mixes[1]} controls />
           </div>
           <div className="rightSong">
             <img src={share} id="share" alt="" />

@@ -230,6 +230,10 @@ class NewMix extends Component {
     newPost(obj);
   };
 
+  handleSliderChange = (e) => {
+    console.log("penis");
+  };
+
   handleChipClick = (e, post) => {
     e.preventDefault();
     let unchosenArr;
@@ -253,7 +257,7 @@ class NewMix extends Component {
       }
     }
 
-    console.log(unchosenArr);
+    // console.log(unchosenArr);
     chosenArr.push(post);
 
     this.setState({});
@@ -300,7 +304,7 @@ class NewMix extends Component {
           artists={this.state.artists}
           handleChipClick={this.handleChipClick}
         />
-        <SliderView />
+        <SliderView handleSliderChange={this.handleSliderChange} />
         <CreateMixButton handleCreateMix={this.handleCreateMix} />
         <Popup trigger={<button> Trigger</button>} position="right center">
           <div>Popup content here !!</div>

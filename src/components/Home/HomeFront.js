@@ -12,7 +12,7 @@ const HomeFront = (props) => {
   return (
     <div className="HomeFront">
       <div id="numMix">Mixes: {props.songs.length}</div>
-      <HomeMixes songs={songs} handleSoloClick={props.handleSoloClick} />
+      <HomeMixes songs={props.songs} handleSoloClick={props.handleSoloClick} />
     </div>
   );
 };
