@@ -104,10 +104,10 @@ class App extends Component {
             path="/new"
             render={() => <NewMix currentUser={this.state.currentUser} />}
           />
-          <div id="title">Sound Flex</div>
-          <TypeList types={this.state.types} />
-          <CreateMixButton createMix={this.createMix} />
+          {/* <div id="title">Sound Flex</div> */}
         </Switch>
+        {/* <TypeList types={this.state.types} /> */}
+        {/* <CreateMixButton createMix={this.createMix} /> */}
       </>
     );
   }

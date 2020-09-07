@@ -47,8 +47,8 @@ class SliderView extends Component {
     return (
       <div className="SliderView">
         <div className="sliders">
-          {this.state.genres.map((genre) => (
-            <div className="indSlider">
+          {this.state.genres.map((genre, genreIdx) => (
+            <div className="indSlider" key={genreIdx}>
               <div>
                 {genre.name}: {}
               </div>

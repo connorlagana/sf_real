@@ -13,12 +13,12 @@ const theme1 = createMuiTheme({
 const ArtistsList = (props) => {
   return (
     <div className="ArtistsList">
-      {props.artists.map((genre) => (
-        <div className="genre">
+      {props.artists.map((genre, genreIdx) => (
+        <div className="genre" key={genreIdx}>
           <div id="title">{genre.genre}</div>
           <div className="underTitle">
-            {genre.artists.map((artist) => (
-              <MuiThemeProvider theme={theme1} id="chip">
+            {genre.artists.map((artist, artistIdx) => (
+              <MuiThemeProvider theme={theme1} id="chip" key={artistIdx}>
                 <Chip
                   label={artist.name}
                   color="secondary"
