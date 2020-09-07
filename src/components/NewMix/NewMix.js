@@ -165,6 +165,7 @@ class NewMix extends Component {
     const oldies = createObjArtists(oldiesArtists, "Oldies");
 
     this.setState({
+      genres: {},
       artists: [
         {
           genre: "Pop",
@@ -230,8 +231,10 @@ class NewMix extends Component {
     newPost(obj);
   };
 
-  handleSliderChange = (e) => {
-    console.log("penis");
+  handleSliderChange = (genres) => {
+    // this.setState({
+    //   genres: genres,
+    // });
   };
 
   handleChipClick = (e, post) => {

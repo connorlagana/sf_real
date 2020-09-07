@@ -29,6 +29,7 @@ class Home extends Component {
     console.log("fetching user mixes");
     const userid = this.state.currentUser.id;
     const resp = await postDetails(userid);
+    console.log(`fucking bats`);
 
     console.log(resp.data);
     this.setState({

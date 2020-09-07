@@ -63,7 +63,8 @@ class SliderView extends Component {
                   marks
                   min={0}
                   max={100}
-                  onChange={this.props.handleSliderChange}
+                  value={genre.num}
+                  onChange={this.props.handleSliderChange(this.state.genres)}
                 />
                 <div>Dislike</div>
               </div>

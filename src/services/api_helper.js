@@ -1,12 +1,12 @@
 import axios from "axios";
 
-const api = axios.create({
-  baseURL: "http://localhost:3000",
-});
-
 // const api = axios.create({
-//   baseURL: "https://git.heroku.com/soundflexio.git",
+//   baseURL: "http://localhost:3000",
 // });
+
+const api = axios.create({
+  baseURL: "https://mighty-tundra-30581.herokuapp.com",
+});
 
 // AUTH API_HELPER API CALLS
 
