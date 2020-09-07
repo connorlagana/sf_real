@@ -3,8 +3,8 @@ import "./App.scss";
 
 import { registerUser } from "./services/api_helper";
 
-import TypeList from "./components/TypeList";
-import CreateMixButton from "./components/CreateMixButton";
+// import TypeList from "./components/TypeList";
+// import CreateMixButton from "./components/CreateMixButton";
 import FrontPage from "./components/FrontPage/FrontPage.js";
 import NavBar from "./components/FrontPage/NavBar.js";
 import FrontFooter from "./components/FrontPage/FrontFooter.js";
