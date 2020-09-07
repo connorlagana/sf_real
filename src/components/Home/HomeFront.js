@@ -1,13 +1,6 @@
 import React from "react";
 import HomeMixes from "./HomeMixes.js";
 
-const songs = [
-  {
-    title: "Connor1",
-    mix: "3",
-  },
-];
-
 const HomeFront = (props) => {
   return (
     <div className="HomeFront">

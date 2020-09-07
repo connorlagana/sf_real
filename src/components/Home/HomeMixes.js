@@ -17,9 +17,9 @@ const mixes = [mix1, mix2, mix3, mix4];
 const HomeMixes = (props) => {
   return (
     <div className="HomeMixes">
-      {props.songs.map((song) => (
+      {props.songs.map((song, songIdx) => (
         // <Link to="/yourmix">
-        <div className="song">
+        <div className="song" key={songIdx}>
           <div className="leftSong">
             <div id="square" className="grad4" />
             <div id="songName">{song.title}</div>

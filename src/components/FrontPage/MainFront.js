@@ -140,12 +140,8 @@ class MainFront extends Component {
           </div>
         </div>
         <div className="rightFront">
-          {this.state.pics.map((art) => (
-            // <div className="art">
-            //   <img src={art} />
-            // </div>
-
-            <div className="art">
+          {this.state.pics.map((art, artIdx) => (
+            <div className="art" key={artIdx}>
               <img src={art} alt="" />
             </div>
           ))}
