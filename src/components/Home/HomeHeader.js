@@ -10,6 +10,9 @@ const HomeHeader = (props) => {
         <div className="logoDiv">
           <img id="circleLogo" src={circleLogo} alt="" />
           <img id="wordLogo" src={logo2} alt="" />
+          <button id="logout" onClick={props.handleLogout}>
+            Logout
+          </button>
         </div>
         <br />
       </div>

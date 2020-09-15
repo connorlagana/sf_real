@@ -314,6 +314,10 @@
       justify-content: center;
       align-items: center;
 
+      & #logout {
+        background-color: blanchedalmond;
+      }
+
       & #circleLogo {
         height: 5vh;
         cursor: pointer;

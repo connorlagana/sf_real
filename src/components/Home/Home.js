@@ -39,7 +39,10 @@ class Home extends Component {
   render() {
     return (
       <div className="Home">
-        <HomeHeader currentUser={this.state.currentUser} />
+        <HomeHeader
+          currentUser={this.state.currentUser}
+          handleLogout={this.props.handleLogout}
+        />
         <HomeFront
           songs={this.state.songs}
           handleSoloClick={this.handleSoloClick}

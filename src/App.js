@@ -71,6 +71,13 @@ class App extends Component {
     }
   };
 
+  handleLogout = () => {
+    this.setState({
+      currentUser: false,
+    });
+    localStorage.removeItem("authToken");
+  };
+
   handleRegister = async (e, registerData) => {
     e.preventDefault();
     if (!registerData.username || !registerData.password) {
@@ -124,7 +131,12 @@ class App extends Component {
           <Route
             exact
             path="/home"
-            render={() => <Home currentUser={this.state.currentUser} />}
+            render={() => (
+              <Home
+                currentUser={this.state.currentUser}
+                handleLogout={this.handleLogout}
+              />
+            )}
           />
           <Route
             exact
