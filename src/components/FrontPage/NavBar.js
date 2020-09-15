@@ -8,19 +8,21 @@ const NavBar = () => {
   return (
     <div className="NavBar">
       <div className="leftNav">
-        <div className="logoDiv">
-          <img id="circleLogo" src={circleLogo} alt="" />
-          <img id="wordLogo" src={logo2} alt="" />
-        </div>
+        <li className="logoDiv">
+          <Link to="/">
+            <img id="circleLogo" src={circleLogo} alt="" />
+            <img id="wordLogo" src={logo2} alt="" />
+          </Link>
+        </li>
         <br></br>
       </div>
       <div className="rightNav">
         <ul>
-          <li>
+          {/* <li>
             <Link to="/premium" className="link">
               Premium
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/about" className="link">
               About

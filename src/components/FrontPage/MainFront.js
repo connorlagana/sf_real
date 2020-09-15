@@ -130,9 +130,9 @@ class MainFront extends Component {
       <div className="MainFront">
         <div className="leftFront">
           <div className="centeredStack">
-            <div id="bigLabel">Music made for everyone</div>
+            <div id="bigLabel">Music made for you.</div>
             <div id="smallLabel">
-              All your favorite songs in a 1 hour mix. No credit card needed.
+              All of your favorite songs in a 1 hour mix. No credit card needed.
             </div>
             <Link to="/register">
               <button>Get Soundflex Free</button>
