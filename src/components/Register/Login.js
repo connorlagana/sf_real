@@ -7,7 +7,7 @@ class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: "",
+      username: "",
       password: "",
     };
   }
@@ -38,10 +38,10 @@ class Login extends Component {
         <form>
           <input
             type="text"
-            name="email"
-            value={this.state.email}
+            name="username"
+            value={this.state.username}
             onChange={this.handleChange}
-            placeholder="Enter your email"
+            placeholder="Enter your username"
             // onfocus="this.select()"
             required
           />
@@ -54,7 +54,15 @@ class Login extends Component {
             placeholder="Create a password"
             required
           />
-          <button className="buttonfx curtainup" onClick={this.loginUser}>
+          <button
+            className="buttonfx curtainup"
+            onClick={(e) => {
+              this.props.handleLogin(e, {
+                username: this.state.username,
+                password: this.state.password,
+              });
+            }}
+          >
             Login
           </button>
         </form>

@@ -58,7 +58,7 @@ class App extends Component {
     const currentUser = await loginUser(loginData);
     console.log("this is the current5 user", currentUser);
     this.setState({
-      currentUser,
+      currentUser: currentUser,
     });
   };
 
