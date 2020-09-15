@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.scss";
 
-import { registerUser } from "./services/api_helper";
+import { registerUser, loginUser, verifyUser } from "./services/api_helper";
 
 // import TypeList from "./components/TypeList";
 // import CreateMixButton from "./components/CreateMixButton";
@@ -11,6 +11,7 @@ import FrontFooter from "./components/FrontPage/FrontFooter.js";
 import Home from "./components/Home/Home.js";
 import { Route, Redirect, Switch } from "react-router-dom";
 import Register from "./components/Register/Register";
+import Login from "./components/Register/Login";
 import NewMix from "./components/NewMix/NewMix.js";
 import About from "./components/About/About.js";
 
@@ -51,6 +52,25 @@ class App extends Component {
     // audio.play();
   };
 
+  handleLogin = async (e, loginData) => {
+    e.preventDefault();
+
+    const currentUser = await loginUser(loginData);
+    console.log("this is the current5 user", currentUser);
+    this.setState({
+      currentUser,
+    });
+  };
+
+  handleVerify = async () => {
+    const currentUser = await verifyUser();
+    if (currentUser) {
+      this.setState({
+        currentUser,
+      });
+    }
+  };
+
   handleRegister = async (e, registerData) => {
     e.preventDefault();
     if (!registerData.username || !registerData.password) {
@@ -66,6 +86,10 @@ class App extends Component {
     }
   };
 
+  componentDidMount = () => {
+    this.handleVerify();
+  };
+
   render() {
     if (this.state.currentUser === false) {
       return (
@@ -75,6 +99,9 @@ class App extends Component {
 
           <Route exact path="/">
             <FrontPage />
+          </Route>
+          <Route exact path="/login">
+            <Login handleLogin={this.handleLogin} />
           </Route>
 
           <Route path="/register">

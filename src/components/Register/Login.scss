@@ -1,0 +1,71 @@
+.Login {
+  background-color: black;
+  height: 70vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  & .logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 10vh;
+
+    & #circleLogo {
+      height: 7vh;
+    }
+
+    & #wordLogo {
+      height: 4vh;
+      margin-bottom: 1vh;
+    }
+  }
+
+  & form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & input {
+      border-color: white;
+      border: solid;
+      border-width: 0.1vh;
+      border-radius: 1vh;
+      background-color: black;
+      color: white;
+      height: 4vh;
+      width: 20vw;
+      font-size: 2vh;
+      outline: none;
+      margin: 1.2vh;
+      padding-left: 1vh;
+      transition: 0.3s;
+      font-family: "Heebo", sans-serif;
+    }
+
+    & input:focus {
+      border-color: rgb(243, 176, 106);
+    }
+
+    & button {
+      height: 4vh;
+      width: 20vw;
+      border: none;
+      font-size: 2vh;
+      font-family: "Heebo", sans-serif;
+      text-transform: uppercase;
+      background-color: rgb(243, 176, 106);
+      border-radius: 10vh;
+      margin: 1.2vh;
+      outline: none;
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      transition: all 0.5s;
+    }
+  }
+}

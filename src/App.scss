@@ -729,4 +729,18 @@
       }
     }
   }
+
+  .Register {
+    & form {
+      & input {
+        width: 60vw;
+      }
+
+      & button {
+        height: 6vh;
+        width: 50vw;
+        font-weight: 500;
+      }
+    }
+  }
 }
