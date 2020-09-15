@@ -30,12 +30,12 @@ const NavBar = () => {
           </li>
           <li>
             <Link to="/register" className="link">
-              Sign Up
+              SignUp
             </Link>
           </li>
           <li>
             <Link to="/login" className="link">
-              Log In
+              Login
             </Link>
           </li>
         </ul>

@@ -52,16 +52,15 @@
       flex-direction: row;
       & li {
         margin: 2vh;
-        font-size: 1.7vh;
+
         color: white;
         cursor: pointer;
         list-style-type: none;
+        word-wrap: none;
 
         & .link {
-          position: relative;
-          display: block;
           text-align: center;
-          font-size: 16px;
+          font-size: 1.7vh;
           color: #ffffff;
           text-transform: uppercase;
           text-decoration: none;
@@ -708,6 +707,24 @@
 
     & .rightFront {
       display: none;
+    }
+  }
+
+  .NavBar {
+    & .rightNav {
+      width: 70vw;
+
+      & ul {
+        margin: 0;
+        height: 8vh;
+
+        & li {
+          & .link {
+            font-size: 1.8vh;
+            font-weight: 500;
+          }
+        }
+      }
     }
   }
 }
