@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Fade from "react-reveal/Fade";
+
 import pic1 from "../../pics/1.jpg";
 import pic2 from "../../pics/2.jpg";
 import pic3 from "../../pics/3.jpg";
@@ -130,12 +132,19 @@ class MainFront extends Component {
       <div className="MainFront">
         <div className="leftFront">
           <div className="centeredStack">
-            <div id="bigLabel">Music made for you.</div>
-            <div id="smallLabel">
-              All of your favorite songs in a 1 hour mix. No credit card needed.
-            </div>
+            <Fade top>
+              <div id="bigLabel">Music made for you.</div>
+            </Fade>
+            <Fade>
+              <div id="smallLabel">
+                All of your favorite songs in a 1 hour mix. No credit card
+                needed.
+              </div>
+            </Fade>
             <Link to="/register">
-              <button>Get Soundflex Free</button>
+              <Fade bottom>
+                <button>Get Soundflex Free</button>
+              </Fade>
             </Link>
           </div>
         </div>
