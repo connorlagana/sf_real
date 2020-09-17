@@ -10,6 +10,7 @@ class Register extends Component {
       emailConfirm: "",
       username: "",
       password: "",
+      disable: "",
     };
   }
 
@@ -23,6 +24,9 @@ class Register extends Component {
   registerUser = (e) => {
     if (this.state.email === this.state.emailConfirm) {
       console.log("they match");
+      this.setState({
+        disable: "disable",
+      });
       this.props.handleRegister(e, {
         username: this.state.username,
         email: this.state.email,
@@ -76,7 +80,11 @@ class Register extends Component {
             placeholder="Create a password"
             required
           />
-          <button className="buttonfx curtainup" onClick={this.registerUser}>
+          <button
+            className="buttonfx curtainup"
+            id={this.state.disable}
+            onClick={this.registerUser}
+          >
             Sign Up
           </button>
         </form>

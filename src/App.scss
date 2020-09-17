@@ -291,6 +291,12 @@
       cursor: pointer;
       transition: all 0.5s;
     }
+
+    & #disable {
+      background-color: white;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
   }
 }
 
