@@ -4,6 +4,7 @@ import HomeFront from "./HomeFront.js";
 // import SoloMix from "../SoloMix/SoloMix.js";
 // import { Route } from "react-router-dom";
 import { postDetails } from "../../services/api_helper.js";
+import axios from "axios";
 
 class Home extends Component {
   constructor(props) {
@@ -29,12 +30,15 @@ class Home extends Component {
     console.log("fetching user mixes");
     const userid = this.state.currentUser.id;
     const resp = await postDetails(userid);
-    console.log(`fucking bats`);
 
-    console.log(resp.data);
-    this.setState({
+    console.log(`current user id: ${userid}`);
+    console.log(`current resp Post Details:`, resp.data);
+
+    await this.setState({
       songs: resp.data,
     });
+
+    console.log("the songs are:", this.state.songs);
   };
   render() {
     return (
