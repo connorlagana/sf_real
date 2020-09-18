@@ -4,9 +4,6 @@ import ChosenArtists from "./ChosenArtists.js";
 import ArtistsList from "./ArtistsList.js";
 import SliderView from "./SliderView.js";
 import CreateMixButton from "./CreateMixButton.js";
-import Popup from "reactjs-popup";
-// import ReactAudioPlayer from "react-audio-player";
-// import powfu from "../../songtest/powfu.mp3";
 
 import { newPost } from "../../services/api_helper.js";
 
@@ -153,12 +150,15 @@ class NewMix extends Component {
         dance: 0,
         pop: 0,
       },
+      grad: "grad1",
       chosenArtists: [],
       artists: [],
     };
   }
 
-  componentDidMount() {
+  async componentDidMount() {
+    await this.randomGrad();
+
     const pop = createObjArtists(popArtists, "Pop");
     const rap = createObjArtists(rapArtists, "Rap");
     const dance = createObjArtists(danceArtists, "Dance");
@@ -185,22 +185,25 @@ class NewMix extends Component {
         },
       ],
     });
-    // console.log("fuck");
     console.log(this.state);
-
-    // this.fetchPosts();
   }
-
-  // fetchPosts = async () => {
-  //   const posts = await showPost(1);
-
-  //   console.log("these are posts", posts);
-  // };
 
   handleTitleChange = (e) => {
     const { name, value } = e.target;
     this.setState({
       [name]: value,
+    });
+  };
+
+  randomGrad = () => {
+    const numberOfGrads = 10;
+
+    const rand = Math.floor(Math.random() * numberOfGrads + 1);
+
+    const randGradStr = `grad${rand}`;
+
+    this.setState({
+      grad: randGradStr,
     });
   };
 
@@ -226,6 +229,7 @@ class NewMix extends Component {
     let obj = {
       title: this.state.title,
       mix: best,
+      grad: this.state.grad,
     };
 
     newPost(obj);
@@ -252,7 +256,6 @@ class NewMix extends Component {
     } else if (post.genre === "Oldies") {
       unchosenArr = this.state.artists[3].artists;
     }
-    // unchosenArr.filter((a) => a.genre != "Rap");
 
     for (let i = 0; i < unchosenArr.length; i++) {
       if (unchosenArr[i].artistId === post.artistId) {
@@ -260,7 +263,6 @@ class NewMix extends Component {
       }
     }
 
-    // console.log(unchosenArr);
     chosenArr.push(post);
 
     this.setState({});
@@ -309,9 +311,6 @@ class NewMix extends Component {
         />
         <SliderView handleSliderChange={this.handleSliderChange} />
         <CreateMixButton handleCreateMix={this.handleCreateMix} />
-        <Popup trigger={<button> Trigger</button>} position="right center">
-          <div>Popup content here !!</div>
-        </Popup>
       </div>
     );
   }

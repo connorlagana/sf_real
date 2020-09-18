@@ -1,5 +1,4 @@
 import React from "react";
-import share from "../../icons/share.png";
 import plus from "../../icons/plus.png";
 import ReactAudioPlayer from "react-audio-player";
 import mix1 from "../../mixes/Mix1.mp3";
@@ -17,28 +16,18 @@ const HomeMixes = (props) => {
     <div className="HomeMixes">
       {props.songs.map((song, songIdx) => (
         <div className="song" key={songIdx}>
-          <div className="leftSong">
-            <div id="square" className="grad4" />
-            <div id="songName">{song.title}</div>
-            <ReactAudioPlayer src={mixes[1]} controls />
-          </div>
-          <div className="rightSong">
-            <img src={share} id="share" alt="" />
-            <div>
-              {song.min}:{song.sec}
-            </div>
-          </div>
+          <div id="songName">{song.title}</div>
+          <div id="square" className={song.grad} />
+          <ReactAudioPlayer src={mixes[1]} controls />
         </div>
       ))}
 
       <div className="song">
         <Link to="/new">
-          <div className="leftSong">
-            <div id="square" className="add">
-              <img src={plus} id="plus" alt="" />
-            </div>
-            <div id="songName">Create New Mix</div>
+          <div id="square" className="add">
+            <img src={plus} id="plus" alt="" />
           </div>
+          <div id="songName">Create New Mix</div>
         </Link>
       </div>
     </div>
