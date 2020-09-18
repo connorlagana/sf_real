@@ -85,19 +85,9 @@ const HomeMixes = (props) => {
   return (
     <div className="HomeMixes">
       {mixes.map((song, songIdx) => (
-        // <Link to="/yourmix">
         <div className="song" key={songIdx}>
-          <div className="leftSong">
-            <div id="square" className="grad4" />
-            <div id="songName">{song.title}</div>
-            {/* <ReactAudioPlayer src={mixes[1]} controls /> */}
-          </div>
-          <div className="rightSong">
-            <img src={share} id="share" alt="" />
-            <img src={play} id="play" alt="" />
-          </div>
+          hello
         </div>
-        // </Link>
       ))}
 
       <div className="song">
