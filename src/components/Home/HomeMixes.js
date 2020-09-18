@@ -14,10 +14,77 @@ import { Link } from "react-router-dom";
 
 // const songUrl = "https://media.vocaroo.com/mp3/1ohtk7IZgs5";
 
+const mixes = [
+  {
+    id: 1,
+    title: "",
+    mix: "mix1",
+    createdAt: "2020-09-07T16:36:16.791Z",
+    updatedAt: "2020-09-07T16:36:16.791Z",
+    userId: "1",
+  },
+  {
+    id: 2,
+    title: "",
+    mix: "mix1",
+    createdAt: "2020-09-07T18:46:01.250Z",
+    updatedAt: "2020-09-07T18:46:01.250Z",
+    userId: "2",
+  },
+  {
+    id: 3,
+    title: "dick bangers vol 3",
+    mix: "mix1",
+    createdAt: "2020-09-07T18:47:14.412Z",
+    updatedAt: "2020-09-07T18:47:14.412Z",
+    userId: "2",
+  },
+  {
+    id: 4,
+    title: "Fuckme",
+    mix: "mix1",
+    createdAt: "2020-09-07T18:50:56.098Z",
+    updatedAt: "2020-09-07T18:50:56.098Z",
+    userId: "3",
+  },
+  {
+    id: 5,
+    title: "Swag Daddy's Pump Jam",
+    mix: "mix1",
+    createdAt: "2020-09-07T19:23:10.284Z",
+    updatedAt: "2020-09-07T19:23:10.284Z",
+    userId: "10",
+  },
+  {
+    id: 6,
+    title: "",
+    mix: "mix1",
+    createdAt: "2020-09-09T19:22:15.368Z",
+    updatedAt: "2020-09-09T19:22:15.368Z",
+    userId: "11",
+  },
+  {
+    id: 7,
+    title: "",
+    mix: "mix1",
+    createdAt: "2020-09-09T19:22:16.029Z",
+    updatedAt: "2020-09-09T19:22:16.029Z",
+    userId: "11",
+  },
+  {
+    id: 8,
+    title: "Con lagans mix",
+    mix: "mix1",
+    createdAt: "2020-09-15T03:35:51.477Z",
+    updatedAt: "2020-09-15T03:35:51.477Z",
+    userId: "16",
+  },
+];
+
 const HomeMixes = (props) => {
   return (
     <div className="HomeMixes">
-      {props.songs.map((song, songIdx) => (
+      {mixes.map((song, songIdx) => (
         // <Link to="/yourmix">
         <div className="song" key={songIdx}>
           <div className="leftSong">
@@ -27,9 +94,6 @@ const HomeMixes = (props) => {
           </div>
           <div className="rightSong">
             <img src={share} id="share" alt="" />
-            <div>
-              {song.min}:{song.sec}
-            </div>
             <img src={play} id="play" alt="" />
           </div>
         </div>
