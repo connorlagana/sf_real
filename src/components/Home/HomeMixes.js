@@ -1,7 +1,5 @@
 import React from "react";
 import share from "../../icons/share.png";
-import play from "../../icons/play.png";
-import pause from "../../icons/pause.png";
 import plus from "../../icons/plus.png";
 import ReactAudioPlayer from "react-audio-player";
 import mix1 from "../../mixes/Mix1.mp3";
@@ -29,7 +27,6 @@ const HomeMixes = (props) => {
             <div>
               {song.min}:{song.sec}
             </div>
-            <img src={play} id="play" alt="" />
           </div>
         </div>
       ))}
