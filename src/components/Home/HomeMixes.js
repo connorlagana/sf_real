@@ -1,6 +1,6 @@
 import React from "react";
-import share from "../../icons/share.png";
-import play from "../../icons/play.png";
+// import share from "../../icons/share.png";
+// import play from "../../icons/play.png";
 // import pause from "../../icons/pause.png";
 import plus from "../../icons/plus.png";
 // import ReactAudioPlayer from "react-audio-player";
