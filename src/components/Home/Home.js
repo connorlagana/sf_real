@@ -4,7 +4,6 @@ import HomeFront from "./HomeFront.js";
 // import SoloMix from "../SoloMix/SoloMix.js";
 // import { Route } from "react-router-dom";
 import { postDetails } from "../../services/api_helper.js";
-import axios from "axios";
 
 class Home extends Component {
   constructor(props) {
