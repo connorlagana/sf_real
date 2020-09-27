@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Artist from "./Artist";
 
 class TypeList extends Component {
-  constructor(props) {
+  constructor() {
     super();
     this.state = {};
   }
