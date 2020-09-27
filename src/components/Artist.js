@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Artist extends Component {
   constructor(props) {
-    super(props);
+    super();
     this.state = {};
   }
   render() {

@@ -141,8 +141,8 @@ const createObjArtists = (arr, genre) => {
 };
 
 class NewMix extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       title: "",
       ratings: {

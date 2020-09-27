@@ -3,10 +3,7 @@ import "./About.scss";
 import WhatIs from "./WhatIs.js";
 
 class About extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+  state = {};
 
   render() {
     return (

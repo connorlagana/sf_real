@@ -3,7 +3,7 @@ import Artist from "./Artist";
 
 class TypeList extends Component {
   constructor(props) {
-    super(props);
+    super();
     this.state = {};
   }
   render() {

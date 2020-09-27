@@ -6,13 +6,10 @@ import HomeFront from "./HomeFront.js";
 import { postDetails } from "../../services/api_helper.js";
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentUser: this.props.currentUser,
-      songs: [],
-    };
-  }
+  state = {
+    currentUser: this.props.currentUser,
+    songs: [],
+  };
 
   componentDidMount() {
     console.log("the following is the state of home");

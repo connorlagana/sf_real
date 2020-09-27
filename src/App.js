@@ -16,7 +16,7 @@ import NewMix from "./components/NewMix/NewMix.js";
 import About from "./components/About/About.js";
 
 class App extends Component {
-  constructor() {
+  constructor(props) {
     super();
 
     this.state = {

@@ -4,8 +4,8 @@ import logo1 from "../../logos/logo1.png";
 import "./Login.scss";
 
 class Login extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       username: "",
       password: "",

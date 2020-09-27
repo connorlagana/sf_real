@@ -14,30 +14,26 @@ import Slider from "@material-ui/core/Slider";
 // });
 
 class SliderView extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      genres: [
-        {
-          name: "Pop",
-          num: 60,
-        },
-        {
-          name: "Rap",
-          num: 20,
-        },
-        {
-          name: "Dance",
-          num: 90,
-        },
-        {
-          name: "Oldies",
-          num: 40,
-        },
-      ],
-    };
-  }
+  state = {
+    genres: [
+      {
+        name: "Pop",
+        num: 60,
+      },
+      {
+        name: "Rap",
+        num: 20,
+      },
+      {
+        name: "Dance",
+        num: 90,
+      },
+      {
+        name: "Oldies",
+        num: 40,
+      },
+    ],
+  };
 
   valuetext = (value) => {
     return `${value}°C`;

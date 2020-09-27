@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import ReactAudioPlayer from "react-audio-player";
 
-
-
 class SoloMix extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {};
   }
 
@@ -13,7 +11,6 @@ class SoloMix extends Component {
     return (
       <div className="SoloMix">
         <div>Hello from solo mix</div>
-        
       </div>
     );
   }
