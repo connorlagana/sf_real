@@ -16,8 +16,8 @@ import NewMix from "./components/NewMix/NewMix.js";
 import About from "./components/About/About.js";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       currentUser: false,
