@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ReactAudioPlayer from "react-audio-player";
 
 class SoloMix extends Component {
   constructor() {
