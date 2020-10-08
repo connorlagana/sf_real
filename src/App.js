@@ -7,6 +7,7 @@ import { Route, Redirect, Switch } from "react-router-dom";
 import Home from "./components/Home/Home.js";
 import NewMix from "./components/NewMix/NewMix.js";
 import NavBar from "./components/FrontPage/NavBar.js";
+import FrontFooter from "./components/FrontPage/FrontFooter.js";
 
 class App extends Component {
   constructor() {
@@ -68,6 +69,7 @@ class App extends Component {
         <>
           <Redirect to="/" />
           <NavBar />
+          <FrontFooter />
         </>
       );
     }
