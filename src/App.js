@@ -3,8 +3,6 @@ import "./App.scss";
 
 import { registerUser, loginUser, verifyUser } from "./services/api_helper";
 
-// import TypeList from "./components/TypeList";
-// import CreateMixButton from "./components/CreateMixButton";
 import FrontPage from "./components/FrontPage/FrontPage.js";
 import NavBar from "./components/FrontPage/NavBar.js";
 import FrontFooter from "./components/FrontPage/FrontFooter.js";
@@ -23,34 +21,6 @@ class App extends Component {
       currentUser: false,
     };
   }
-
-  createMix = async (e, musicData) => {
-    e.preventDefault();
-
-    let count = 0;
-    let low = 10000;
-
-    for (const el in this.state.mix) {
-      count = this.state.mix[el].length;
-
-      console.log(count);
-      if (count < low) {
-        low = count;
-      }
-
-      count = 0;
-    }
-
-    //This is the maximum amount of songs we can make from the users selection
-    console.log("the lowest number is: " + low);
-
-    // for (const el in this.state.mix) {
-    // }
-
-    // let audio = new Audio(songCreated);
-
-    // audio.play();
-  };
 
   handleLogin = async (e, loginData) => {
     e.preventDefault();
