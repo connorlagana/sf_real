@@ -315,9 +315,12 @@ class NewMix extends Component {
 
     let obj = {
       title: this.state.title,
-      mix: best,
+      mix: "mix11",
       grad: this.state.grad,
     };
+
+    console.log("making a new post", obj);
+    console.log("the best is", best);
 
     newPost(obj);
   };

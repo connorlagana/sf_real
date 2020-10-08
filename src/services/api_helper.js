@@ -57,8 +57,9 @@ export const allPosts = async () => {
   return resp.data;
 };
 
-export const newPost = async (newPost) => {
-  const resp = await api.post("/posts", newPost);
+export const newPost = async (obj) => {
+  const resp = await api.post("/posts", obj);
+  console.log("just made a new post!!!", resp);
   return resp.data;
 };
 
