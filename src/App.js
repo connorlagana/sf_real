@@ -3,18 +3,8 @@ import "./App.scss";
 
 import { registerUser, loginUser, verifyUser } from "./services/api_helper";
 
-import FrontPage from "./components/FrontPage/FrontPage.js";
-import NavBar from "./components/FrontPage/NavBar.js";
-import FrontFooter from "./components/FrontPage/FrontFooter.js";
-import Home from "./components/Home/Home.js";
-import { Route, Redirect, Switch } from "react-router-dom";
-import Register from "./components/Register/Register";
-import Login from "./components/Register/Login";
-import NewMix from "./components/NewMix/NewMix.js";
-import About from "./components/About/About.js";
-
 class App extends Component {
-  constructor(props) {
+  constructor() {
     super();
 
     this.state = {
@@ -68,50 +58,10 @@ class App extends Component {
   };
 
   render() {
-    if (this.state.currentUser === false) {
-      return (
-        <>
-          <NavBar />
-          <Redirect to="/" />
-
-          <Route exact path="/">
-            <FrontPage />
-          </Route>
-          <Route exact path="/login">
-            <Login handleLogin={this.handleLogin} />
-          </Route>
-
-          <Route path="/register">
-            <Register handleRegister={this.handleRegister} />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <FrontFooter />
-        </>
-      );
-    }
     return (
-      <>
-        <Redirect to="/home" />
-        <Switch>
-          <Route
-            exact
-            path="/home"
-            render={() => (
-              <Home
-                currentUser={this.state.currentUser}
-                handleLogout={this.handleLogout}
-              />
-            )}
-          />
-          <Route
-            exact
-            path="/new"
-            render={() => <NewMix currentUser={this.state.currentUser} />}
-          />
-        </Switch>
-      </>
+      <div>
+        <div>Hello World</div>
+      </div>
     );
   }
 }
