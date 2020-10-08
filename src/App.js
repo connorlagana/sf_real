@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import "./App.scss";
 
 import { registerUser, loginUser, verifyUser } from "./services/api_helper";
-import { Redirect } from "react-router-dom";
+import { Route, Redirect, Switch } from "react-router-dom";
+
+import Home from "./components/Home/Home.js";
+import NewMix from "./components/NewMix/NewMix.js";
+import NavBar from "./components/FrontPage/NavBar.js";
 
 class App extends Component {
   constructor() {
@@ -61,15 +65,32 @@ class App extends Component {
   render() {
     if (this.state.currentUser === false) {
       return (
-        <div>
-          <div>Hello World</div>
-        </div>
+        <>
+          <Redirect to="/" />
+          <NavBar />
+        </>
       );
     }
     return (
       <>
         <Redirect to="/home" />
-        <div>Hello World2</div>
+        <Switch>
+          <Route
+            exact
+            path="/home"
+            render={() => (
+              <Home
+                currentUser={this.state.currentUser}
+                handleLogout={this.handleLogout}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/new"
+            render={() => <NewMix currentUser={this.state.currentUser} />}
+          />
+        </Switch>
       </>
     );
   }
