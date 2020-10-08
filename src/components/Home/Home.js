@@ -9,6 +9,7 @@ class Home extends Component {
   state = {
     currentUser: this.props.currentUser,
     songs: [],
+    alreadyHave: [],
   };
 
   componentDidMount() {
@@ -30,12 +31,35 @@ class Home extends Component {
     console.log(`current user id: ${userid}`);
     console.log(`current resp Post Details:`, resp.data);
 
+    const anal = resp.data;
+
+    const newMixes = [];
+    const titles = [];
+    for (let i = 0; i < anal.length; i++) {
+      const str = anal[i].mix;
+      const num = str.substring(3);
+      const inInd = parseInt(num) - 1;
+
+      const tit = anal[i].mix;
+      titles.push(tit);
+
+      const obj = {
+        data: anal[i],
+        index: inInd,
+      };
+      newMixes.push(obj);
+
+      console.log(titles);
+    }
+
     await this.setState({
-      songs: resp.data,
+      songs: newMixes,
+      alreadyHave: titles,
     });
 
     console.log("the songs are:", this.state.songs);
   };
+
   render() {
     return (
       <div className="Home">

@@ -117,9 +117,6 @@ class App extends Component {
           <Route path="/about">
             <About />
           </Route>
-          {/* <Route path="/login">
-            <Register handleRegister={this.handleRegister} />
-          </Route> */}
           <FrontFooter />
         </>
       );
@@ -143,10 +140,7 @@ class App extends Component {
             path="/new"
             render={() => <NewMix currentUser={this.state.currentUser} />}
           />
-          {/* <div id="title">Sound Flex</div> */}
         </Switch>
-        {/* <TypeList types={this.state.types} /> */}
-        {/* <CreateMixButton createMix={this.createMix} /> */}
       </>
     );
   }

@@ -4,126 +4,211 @@ import ChosenArtists from "./ChosenArtists.js";
 import ArtistsList from "./ArtistsList.js";
 import SliderView from "./SliderView.js";
 import CreateMixButton from "./CreateMixButton.js";
-
 import { newPost } from "../../services/api_helper.js";
+import { mixes } from "./Mixes.js";
 
-const findBestMatch = (arr) => {
-  const mix1 = ["a", "b", "c", "d", "e", "f"];
-  const mix2 = ["a", "d", "e", "f"];
-  const mix3 = ["b", "d", "e", "f", "g"];
-  const mix4 = ["b", "d", "e", "f", "g", "h"];
-
-  const mixes = [mix1, mix2, mix3, mix4];
-  const mixesNames = ["mix1", "mix2", "mix3", "mix4"];
-
+const findBestMatch = (arr, alreadyHave) => {
   let highScore = 0;
   let highScoreIndex = 0;
 
   for (let i = 0; i < mixes.length; i++) {
     let count = 0;
+
     for (let j = 0; j < arr.length; j++) {
       const mix = mixes[i];
-      if (mix.includes(arr[j])) {
-        count += 1;
+      if (!alreadyHave.includes(mix.title)) {
+        if (mix.artists.includes(arr[j])) {
+          count += 1;
+          // console.log(i, count);
+        }
+      } else {
+        continue;
       }
+
+      console.log(`${mix.title} has ${count} matches`);
     }
 
-    if (count > highScore) {
+    if (count >= highScore) {
       highScore = count;
       highScoreIndex = i;
     }
   }
 
-  const bestMatchMix = mixesNames[highScoreIndex];
+  console.log("the winner is: ", mixes[highScoreIndex]);
 
-  console.log(bestMatchMix);
-  return bestMatchMix;
+  return mixes[highScoreIndex];
 };
 
 const rapArtists = [
-  "J Cole",
-  "Blackbear",
-  "Aries",
-  "YBN Nahmir",
-  "Convolk",
-  "Guardin",
-  "Brakence",
-  "Kyle",
-  "Young Money",
-  "Call Me Karizma",
-  "G Eazy",
-  "Sammy Adams",
-  "DaBaby",
-  "Cardi B",
-  "Lil Peep",
+  "24kGoldn",
+  "50 Cent",
+  "Anderson Paak",
   "Big Sean",
-  "Schoolboy Q",
+  "Call Me Karizma",
+  "Cardi B",
+  "Chance The Rapper",
+  "Convolk",
+  "DaBaby",
   "Drake",
+  "Eminem",
+  "Fetty Wap",
+  "Future",
+  "G Eazy",
+  "Iamsu",
+  "J Cole",
+  "Kanye West",
+  "Kid Cudi",
+  "Kid Ink",
+  "Kyle",
+  "Lil Aaron",
+  "Lil Dicky",
+  "Lil Peep",
+  "Lil Pump",
+  "Lil Uzi Vert",
+  "Lil Wayne",
+  "Lil Yachty",
+  "Mac Miller",
+  "Migos",
+  "Nicki Minaj",
+  "Notorious BIG",
+  "P-Lo",
+  "Post Malone",
+  "Preme",
+  "Pusha T",
+  "Quavo",
+  "Sage The Gemini",
+  "Snoop Dogg",
   "T-Pain",
-  "Machine Gun Kelly",
-  "Notorious B.I.G",
+  "The Weeknd",
+  "Travis Scott",
+  "Trinidad James",
+  "Ty Dolla Sign",
+  "Wiz Khalifa",
+  "YBN Nahmir",
+  "Yo Gotti",
+  "Young Dro",
 ];
 
 const popArtists = [
-  "Jason Derulo",
-  "Jay Sean",
-  "Loote",
-  "Weezer",
-  "Pink",
-  "Kelly Clarkson",
-  "Trevor Daniel",
-  "Arizona Zervas",
-  "100 gecs",
+  "100 Gecs",
+  "3Oh3!",
+  "AJ Mitchell",
+  "AJR",
+  "Akon",
+  "All American Rejects",
+  "Aloe Blacc",
   "Andy Grammer",
-  "Timeflies",
-  "Wallpaper.",
-  "Lizzo",
-  "Camila Cabello",
+  "Ariana Grande",
+  "Backstreet Boys",
+  "Bastille",
+  "Billie Eilish",
+  "Black Eyed Peas",
+  "Blackbear",
+  "Blink 182",
   "Bruno Mars",
+  "Bryce Vine",
+  "Camila Cabello",
+  "Charlie XCX",
+  "Chris Brown",
+  "Cobra Starship",
+  "Demi Lovato",
+  "Dua Lipa",
+  "Ed Sheeran",
+  "Fifth Harmony",
+  "Frank Ocean",
+  "Franz Ferdinand",
   "Goody Grace",
   "Green Day",
-  "Blink-182",
-  "Franz Ferdinand",
-  "Lifehouse",
-  "Sean Paul",
+  "Jason Derulo",
   "Jay Sean",
+  "Jeremy Zucker",
+  "Justin Bieber",
+  "Katy Perry",
+  "Kelly Clarkson",
+  "Kesha",
+  "Khalid",
+  "Lady Gaga",
+  "Lauv",
+  "Lizzo",
+  "Lukas Graham",
+  "Makeout",
+  "Maroon 5",
+  "Mike Posner",
+  "Owl City",
+  "Pink",
+  "Quinn XCII",
+  "Rihanna",
+  "Sean Paul",
+  "Selena Gomez",
+  "Shakira",
   "Sia",
-  "Florida Georgia Line",
+  "Simple Plan",
+  "Social House",
+  "Sum 41",
+  "SZA",
+  "The Neighbourhood",
+  "The Wanted",
+  "Timeflies",
+  "Tove Lo",
+  "Trevor Daniel",
+  "Uncle Kracker",
+  "Usher",
+  "Wallpaper.",
+  "Weezer",
 ];
 
 const oldiesArtists = [
-  "Creedence Clearwater Revival",
-  "Elton John",
   "Bee Gees",
-  "The Beatles",
-  "Tom Petty",
-  "Journey",
-  "Boston",
-  "Pat Benatar",
-  "Cyndi Lauper",
-  "Rick Springfield",
-  "Survivor",
-  "Michael Jackson",
-  "Chumbawamba",
-  "The Doobie Brothers",
-  "The Rolling Stones",
-  "The Allman Brothers Band",
   "Cher",
+  "Chumbawamba",
+  "Creedence Clearwater Revival",
+  "Cyndi Lauper",
   "Diana Ross",
+  "Eiffel 65",
+  "Elton John",
+  "Janis Joplin",
+  "Journey",
+  "Michael Jackson",
+  "Rick Springfield",
+  "Rolling Stones",
+  "Survivor",
+  "The Beatles",
+  "The Proclaimers",
+  "Tom Petty",
 ];
 
 const danceArtists = [
+  "Astrid S",
+  "Avicii",
+  "Bebe Rexha",
+  "Calvin Harris",
+  "Chainsmokers",
   "Cheat Codes",
-  "Party Favor",
-  "Alan Walker",
+  "Clean Bandit",
+  "David Guetta",
+  "DJ Snake",
+  "Felix Jaehn",
+  "Flume",
   "Galantis",
+  "Illenium",
+  "Kygo",
+  "Loote",
+  "Loud Luxury",
+  "Louis The Child",
+  "Lucas & Steve",
+  "LZRD",
+  "Major Lazer",
+  "Marc E Bassy",
+  "Marshmello",
   "Martin Garrix",
-  "Dante Klein",
-  "Mako",
-  "Don Diablo",
-  "Jonas Aden",
-  "Brooks",
-  "Audien",
+  "Martin Solveig",
+  "Mike Williams",
+  "NOTD",
+  "Sam Feldt",
+  "The Him",
+  "Tiesto",
+  "Tones & I",
+  "Topic",
 ];
 
 const createObjArtists = (arr, genre) => {
@@ -141,8 +226,8 @@ const createObjArtists = (arr, genre) => {
 };
 
 class NewMix extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       title: "",
       ratings: {
@@ -153,6 +238,8 @@ class NewMix extends Component {
       grad: "grad1",
       chosenArtists: [],
       artists: [],
+      alreadyHave: [],
+      currentUser: this.props.currentUser,
     };
   }
 
@@ -224,7 +311,7 @@ class NewMix extends Component {
     console.log(chosenArtists);
 
     //Find best match
-    const best = findBestMatch(chosenArtists);
+    const best = findBestMatch(chosenArtists, this.state.alreadyHave);
 
     let obj = {
       title: this.state.title,
