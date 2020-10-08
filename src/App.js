@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.scss";
 
 import { registerUser, loginUser, verifyUser } from "./services/api_helper";
+import { Redirect } from "react-router-dom";
 
 class App extends Component {
   constructor() {
@@ -58,10 +59,18 @@ class App extends Component {
   };
 
   render() {
+    if (this.state.currentUser === false) {
+      return (
+        <div>
+          <div>Hello World</div>
+        </div>
+      );
+    }
     return (
-      <div>
-        <div>Hello World</div>
-      </div>
+      <>
+        <Redirect to="/home" />
+        <div>Hello World2</div>
+      </>
     );
   }
 }
