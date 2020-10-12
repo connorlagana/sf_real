@@ -39,9 +39,9 @@ const HomeMixes = (props) => {
     <div className="HomeMixes">
       {props.songs.map((song, songIdx) => (
         <div className="song" key={songIdx}>
-          <div id="songName">{song.title}</div>
-          <div id="square" className={song.grad} />
-          <ReactAudioPlayer src={mixes[1]} controls />
+          <div id="songName">{song.data.title}</div>
+          <div id="square" className={song.data.grad} />
+          <ReactAudioPlayer src={mixes[song.index]} controls />
         </div>
       ))}
 

@@ -235,7 +235,7 @@ class NewMix extends Component {
         dance: 0,
         pop: 0,
       },
-      grad: "grad1",
+      grad: "",
       chosenArtists: [],
       artists: [],
       alreadyHave: [],
@@ -315,7 +315,7 @@ class NewMix extends Component {
 
     let obj = {
       title: this.state.title,
-      mix: "mix11",
+      mix: best.title,
       grad: this.state.grad,
     };
 

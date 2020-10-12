@@ -49,7 +49,7 @@ class Home extends Component {
       };
       newMixes.push(obj);
 
-      console.log(titles);
+      console.log("the titles are: ", titles);
     }
 
     await this.setState({
