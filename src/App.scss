@@ -171,7 +171,7 @@
   align-items: center;
   flex-direction: row;
   width: 100vw;
-  height: 30vh;
+  height: vh;
   font-family: "Heebo", sans-serif;
 
   & .leftFF {
@@ -180,14 +180,14 @@
     align-items: center;
     flex-direction: row;
     width: 40vw;
-    height: 30vh;
+    // height: 30vh;
     & .lffCol {
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
       flex-direction: column;
 
-      height: 20vh;
+      // height: 20vh;
       margin: 3vh;
       width: 8vw;
 
@@ -218,7 +218,7 @@
     align-items: center;
     flex-direction: row;
     width: 14vw;
-    height: 30vh;
+    // height: 30vh;
   }
 }
 
@@ -340,6 +340,23 @@
   & .rightHH {
     width: 50vw;
     height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    & .logout {
+      color: white;
+      font-size: 16px;
+      color: #ffffff;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: 0.3s;
+      font-family: "Heebo", sans-serif;
+      cursor: pointer;
+    }
+    & .logout:hover {
+      color: rgb(243, 176, 106);
+    }
     & ul {
       display: flex;
       justify-content: center;

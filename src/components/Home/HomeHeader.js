@@ -10,13 +10,14 @@ const HomeHeader = (props) => {
         <div className="logoDiv">
           <img id="circleLogo" src={circleLogo} alt="" />
           <img id="wordLogo" src={logo2} alt="" />
-          <button id="logout" onClick={props.handleLogout}>
-            Logout
-          </button>
+          
         </div>
         <br />
       </div>
       <div className="rightHH">
+        <div className="logout" onClick={props.handleLogout}>
+            Logout
+          </div>
         {/* <ul>
           <li>
             <Link to="/home" className="link">

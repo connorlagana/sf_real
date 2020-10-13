@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 
 const CreateMixButton = (props) => {
   return (
@@ -10,9 +11,11 @@ const CreateMixButton = (props) => {
       >
         Create Mix
       </button>
+      <Link to="/home">
       <button className={props.butHide2}>
-        Return To Home
+          Return To Home
       </button>
+      </Link>
     </div>
   );
 };
