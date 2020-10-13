@@ -6,6 +6,7 @@ import SliderView from "./SliderView.js";
 import CreateMixButton from "./CreateMixButton.js";
 import { newPost } from "../../services/api_helper.js";
 import { mixes } from "./Mixes.js";
+import { postDetails } from "../../services/api_helper.js"
 
 const findBestMatch = (arr, alreadyHave) => {
   let highScore = 0;
@@ -240,11 +241,14 @@ class NewMix extends Component {
       artists: [],
       alreadyHave: [],
       currentUser: this.props.currentUser,
+      butHide1: "",
+      butHide2: "hide"
     };
   }
 
   async componentDidMount() {
     await this.randomGrad();
+    await this.setAlreadyHave();
 
     const pop = createObjArtists(popArtists, "Pop");
     const rap = createObjArtists(rapArtists, "Rap");
@@ -294,7 +298,24 @@ class NewMix extends Component {
     });
   };
 
-  handleCreateMix = (e) => {
+  setAlreadyHave = async () => {
+    
+    const userid = this.state.currentUser.id;
+    const resp = await postDetails(userid);
+    const mixesHave = resp.data
+
+    let arr = []
+
+    for (let i = 0; i < mixesHave.length; i++) {
+      arr.push(mixesHave[i].mix)
+    }
+
+    this.setState({
+      alreadyHave: arr
+    })
+  }
+
+  handleCreateMix = async (e) => {
     e.preventDefault();
     console.log("Creating a mix");
     const chosenArtistsState = this.state.chosenArtists;
@@ -311,6 +332,7 @@ class NewMix extends Component {
     console.log(chosenArtists);
 
     //Find best match
+    console.log("i already have:", this.state.alreadyHave);
     const best = findBestMatch(chosenArtists, this.state.alreadyHave);
 
     let obj = {
@@ -322,7 +344,12 @@ class NewMix extends Component {
     console.log("making a new post", obj);
     console.log("the best is", best);
 
-    newPost(obj);
+    await newPost(obj);
+
+    this.setState({
+      butHide1: "hide",
+      butHide2: ""
+    })
   };
 
   handleSliderChange = (genres) => {
@@ -400,7 +427,11 @@ class NewMix extends Component {
           handleChipClick={this.handleChipClick}
         />
         <SliderView handleSliderChange={this.handleSliderChange} />
-        <CreateMixButton handleCreateMix={this.handleCreateMix} />
+        <CreateMixButton
+          handleCreateMix={this.handleCreateMix}
+          butHide1={this.state.butHide1}
+          butHide2={this.state.butHide2}
+        />
       </div>
     );
   }

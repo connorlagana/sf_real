@@ -474,6 +474,36 @@
 .NewMix {
   background-color: black;
 
+  & .CreateMixButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 20vh;
+
+    & button {
+      height: 6vh;
+      width: 20vh;
+      background-color: rgb(243, 176, 106);
+      border: none;
+      font-size: 2vh;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 2vh;
+      transition: all 0.4s;
+      margin-bottom: 3vh;
+    }
+
+    & button:hover {
+      background-color: white;
+    }
+
+    & .hide {
+      display: none;
+      background-color: red;
+    }
+  }
+
   & .fixedHeader {
     height: vh;
     width: 100vw;
