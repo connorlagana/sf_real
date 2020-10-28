@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import NewMixHeader from "./NewMixHeader.js";
 import ChosenArtists from "./ChosenArtists.js";
 import ArtistsList from "./ArtistsList.js";
-import SliderView from "./SliderView.js";
+// import SliderView from "./SliderView.js";
 import CreateMixButton from "./CreateMixButton.js";
 import { newPost } from "../../services/api_helper.js";
 import { mixes } from "./Mixes.js";
@@ -426,7 +426,7 @@ class NewMix extends Component {
           artists={this.state.artists}
           handleChipClick={this.handleChipClick}
         />
-        <SliderView handleSliderChange={this.handleSliderChange} />
+        {/* <SliderView handleSliderChange={this.handleSliderChange} /> */}
         <CreateMixButton
           handleCreateMix={this.handleCreateMix}
           butHide1={this.state.butHide1}
