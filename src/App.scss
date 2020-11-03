@@ -720,6 +720,30 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .NewMix {
+    & .fixedHeader {
+      & .midFH {
+        & .TitleNewMix {
+          & .tf {
+            width: 80vw;
+          }
+        }
+      }
+    }
+  }
+
+  .ArtistsList {
+    flex-direction: column;
+
+    & .genre {
+      width: 100vw;
+
+      & .underTitle {
+        width: 100vw;
+      }
+    }
+  }
+
   .MainFront {
     flex-direction: column-reverse;
 
