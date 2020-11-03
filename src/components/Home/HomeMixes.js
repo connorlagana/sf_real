@@ -15,6 +15,9 @@ import mix11 from "../../mixes/Mix11.mp3";
 import mix12 from "../../mixes/Mix12.mp3";
 import mix13 from "../../mixes/Mix13.mp3";
 import mix14 from "../../mixes/Mix14.mp3";
+import mix15 from "../../mixes/Mix15.mp3";
+import mix16 from "../../mixes/Mix16.mp3";
+import mix17 from "../../mixes/Mix17.mp3";
 
 import { Link } from "react-router-dom";
 const mixes = [
@@ -32,6 +35,9 @@ const mixes = [
   mix12,
   mix13,
   mix14,
+  mix15,
+  mix16,
+  mix17,
 ];
 
 const HomeMixes = (props) => {

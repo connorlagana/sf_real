@@ -565,7 +565,7 @@ const mix11Artists = [
   "The Weeknd",
   "Tiesto",
   "Tom Petty",
-  "Tones & I",
+  "Tones and I",
   "Tove Lo",
   "Travis Scott",
   "Ty Dolla Sign",
@@ -706,7 +706,7 @@ const mix13Artists = [
   "The Him",
   "The Neighbourhood",
   "The Proclaimers",
-  "Tones & I",
+  "Tones and I",
   "Topic",
   "Travis Scott",
   "Trinidad James",
@@ -717,7 +717,7 @@ const mix13Artists = [
 
 const mix14Artists = [
   '24k Goldn',
-'3Oh3!',
+'3Oh!3',
 '50 Cent',
 'Akon',
 'Aloe Blacc',
@@ -951,7 +951,7 @@ const mix17Artists = [
 'Chainsmokers',
 'Cheat Codes',
 'Chumbawamba',
-'Cobra Starships',
+'Cobra Starship',
 'Coldplay',
 'Cyndi Lauper',
 'David Guetta',
@@ -1089,7 +1089,7 @@ const mix16 = {
 const mix17 = {
   title: "mix17",
   artists: mix17Artists,
-  firstArtist: ["Harry"],
+  firstArtist: ["Harry Styles"],
 };
 
 
