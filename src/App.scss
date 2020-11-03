@@ -720,6 +720,13 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .CreateMixButton {
+    & #bttn {
+      width: 80vw;
+      
+    }
+  }
+
   .NewMix {
     & .fixedHeader {
       & .midFH {

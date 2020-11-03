@@ -69,3 +69,13 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .Login {
+    & form {
+      & input {
+        width: 60vw;
+      }
+    }
+  }
+}
