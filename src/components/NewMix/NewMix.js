@@ -11,17 +11,24 @@ import { postDetails } from "../../services/api_helper.js"
 const findBestMatch = (arr, alreadyHave) => {
   let highScore = 0;
   let highScoreIndex = 0;
+  let firstArtistsPossibilites = []
 
   for (let i = 0; i < mixes.length; i++) {
     let count = 0;
+    const mix = mixes[i];
 
     for (let j = 0; j < arr.length; j++) {
-      const mix = mixes[i];
+
       if (!alreadyHave.includes(mix.title)) {
+        
         if (mix.artists.includes(arr[j])) {
           count += 1;
           // console.log(i, count);
+          if (mix.firstArtist.includes(arr[j]) && count > 6) {
+          firstArtistsPossibilites.push(i)
+          }
         }
+        
       } else {
         continue;
       }
@@ -36,8 +43,17 @@ const findBestMatch = (arr, alreadyHave) => {
   }
 
   console.log("the winner is: ", mixes[highScoreIndex]);
+  console.log("buuuut: ", firstArtistsPossibilites);
 
-  return mixes[highScoreIndex];
+  if (firstArtistsPossibilites.length > 0) {
+    // return last index of firstArtistsPossibilites
+    console.log("returning: ", firstArtistsPossibilites[firstArtistsPossibilites.length - 1])
+    return mixes[firstArtistsPossibilites[firstArtistsPossibilites.length - 1]];
+  }
+  else {
+    return mixes[highScoreIndex];
+  }
+  
 };
 
 const rapArtists = [
